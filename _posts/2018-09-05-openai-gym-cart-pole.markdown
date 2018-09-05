@@ -68,6 +68,7 @@ env = gym.make('CartPole-v0') # This creates our environment
 env.reset() # Resetting environment conditions
 action = env.action_space.sample() # Choose random action from action space (i.e. random input vector of dimension ...
 
+test
 
 {% endhighlight %}
 
