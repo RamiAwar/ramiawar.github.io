@@ -1,5 +1,5 @@
 ---
-title:  "OpenAI Gym: Cart-Pole"
+title:  "OpenAI Gym: Cart-Pole - Part 1"
 date:   2018-09-05 01:24:38 +0300
 categories: ai
 ---
@@ -60,21 +60,42 @@ They simply describe the gym environment we chose to work on.
 </p>
 
 {% highlight python %}
+
 import gym
 import time 
 
 env = gym.make('CartPole-v0') # This creates our environment 
 
 env.reset() # Resetting environment conditions
-action = env.action_space.sample() # Choose random action from action space (i.e. random input vector of dimension ...
 
-test
+for _ in range(100): # Take 100 frames
+	
+	action = env.action_space.sample() # Choose random action from action space (i.e. random binary digit, which is the input to this environment signifying moving the cart right or moving it left.)
+
+	env.step(action) # Apply action on environment and produce next states/observations
+
+	env.render() # Visualize environment
+
+	time.sleep(0.1)
+
+env.close()
 
 {% endhighlight %}
 
 
+Notice that this produces a warning saying that any steps after the simulation ends are meaningless, and for this we use the return values of `env.step(action)`.
 
+---
+<br/>
 
+`env.step(action)` returns four values:
+
+1. Observation: object described previously, basically is the output of the environment, or the states in a sense. 
+2. Reward: amount of reward achieved by previous action.
+3. Done: boolean indicating if episode is terminated. This should control when we stop issuing actions since they'd be meaningless if issued after `done` was returned `True`.
+4. Info: diagnostic information useful for debugging, which should not be used for learning.
+
+These were taken from [**openai gym docs**][gym-docs].
 
 
 
@@ -86,3 +107,4 @@ test
 
 
 [wiki-link]: https://github.com/openai/gym/wiki/CartPole-v0
+[gym-docs]: https://gym.openai.com/docs/#Observations
