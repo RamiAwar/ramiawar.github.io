@@ -12,7 +12,9 @@ As an introduction to openai's gym, I'll be trying to tackle several environment
 
 For every environment, I'll be quickly describing the observations (outputs), the actions (inputs), and reward, while linking the github repo wiki page for that environment for more details.
 
-# [Cart-Pole Wiki][wiki-link]
+# [**Cart-Pole Wiki**][wiki-link]
+
+#### Observation
 
 For cart-pole, we have an observation vector of length 4, containing:
 
@@ -22,6 +24,19 @@ Num | Observation | Min | Max
 1 | Cart Velocity | -Inf | Inf
 2 | Pole Angle | ~ -41.8&deg; | ~ 41.8&deg;
 3 | Pole Velocity At Tip | -Inf | Inf
+
+This observation vector is outputted by the environment at every step/iteration.
+
+To get this observation, we need to feed the environment an action to then perform a step on.
+Generating a random action that complies with the type and shape of data needed as an input is as simple as calling the action_space.sample() method on the environment object. I'll provide an example below.
+
+#### Action
+
+Num | Action
+--- | ---
+0 | Push cart to the left
+1 | Push cart to the right
+
 
 <br/>
 

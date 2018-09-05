@@ -29,6 +29,8 @@ plugins:
   - jekyll-feed
 
 
+exclude: [welcome.md]
+
 defaults:
   -
     scope:  
