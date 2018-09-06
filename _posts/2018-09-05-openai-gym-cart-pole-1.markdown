@@ -6,7 +6,7 @@ categories: ai
 
 ## Introduction to OpenAI's Gym 
 
-As an introduction to openai's gym, I'll be trying to tackle several environments in as many methods I know of, teaching myself reinforcement learning in the process. This first post will start by exploring the cart-pole environment and solving it using randomness. This will make more sense when you understand what 'solving' it means. I'm assuming you already have gym installed. If not, follow the instructions at [**OpenAI Gym Docs**][docs-installation]
+As an introduction to openai's gym, I'll be trying to tackle several environments in as many methods I know of, teaching myself reinforcement learning in the process. This first post will start by exploring the cart-pole environment and solving it using randomness. This will make more sense when you understand what 'solving' it means. I'm trying to solve the request for research problems posed by OpenAI on the cart pole environment to encourage people to explore it on their own [**Requests For Research Page**][request-research] .I'm assuming you already have gym installed. If not, follow the instructions at [**OpenAI Gym Docs**][docs-installation]
 
 ## Cart-Pole 
 
@@ -227,6 +227,7 @@ env = wrappers.Monitor(env, 'output_movie', force=True)
 
 With this basic introduction to gym and the cartpole environment, I'm ready to tackle a learning-based solution to this problem. I'll be linking part 2 as soon as I get started.
 
+[request-research]: https://openai.com/requests-for-research/#cartpole
 [wiki-link]: https://github.com/openai/gym/wiki/CartPole-v0
 [gym-docs]: https://gym.openai.com/docs/#Observations
 [docs-installation]: https://gym.openai.com/docs/#installation
