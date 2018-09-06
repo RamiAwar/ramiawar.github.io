@@ -6,7 +6,7 @@ categories: ai
 
 ## Introduction to OpenAI's Gym 
 
-As an introduction to openai's gym, I'll be trying to tackle several environments in as many methods I know of, teaching myself reinforcement learning in the process. This first post will start by exploring the cart-pole environment and solving it using randomness. This will make more sense when you understand what 'solving' it means.
+As an introduction to openai's gym, I'll be trying to tackle several environments in as many methods I know of, teaching myself reinforcement learning in the process. This first post will start by exploring the cart-pole environment and solving it using randomness. This will make more sense when you understand what 'solving' it means. I'm assuming you already have gym installed. If not, follow the instructions at [**OpenAI Gym Docs**][docs-installation]
 
 ## Cart-Pole 
 
@@ -196,7 +196,7 @@ while not done:  # Take 100 frames
 
     action = f(x, final_weights)
 
-    x, _, _, _ = env.step(action)
+    x, _, done, _ = env.step(action)
 
     env.render()  # Visualize environment
 
@@ -206,9 +206,27 @@ env.close()  # Close visualization window
 
 {% endhighlight %}
 
-What we did is basically a p-controller, with the constants randomly picked.
+As an additional note, you can save the simulation as an mp4 file using openai gym's wrappers module. Add the following import, and the line after defining your `env` variable.
 
+{% highlight python %}
+from gym import wrappers
+
+env = gym.make('CartPole-v0')
+.
+.
+.
+# When recording is needed:
+env = wrappers.Monitor(env, 'output_movie', force=True)
+ .
+ # Perform simulation as usual, and every step will be recorded
+ .
+ .
+
+{% endhighlight %}
+
+
+With this basic introduction to gym and the cartpole environment, I'm ready to tackle a learning-based solution to this problem. I'll be linking part 2 as soon as I get started.
 
 [wiki-link]: https://github.com/openai/gym/wiki/CartPole-v0
 [gym-docs]: https://gym.openai.com/docs/#Observations
-
+[docs-installation]: https://gym.openai.com/docs/#installation
