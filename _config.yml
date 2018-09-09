@@ -22,6 +22,9 @@ url: "https://ramiawar.github.io" # the base hostname & protocol for your site, 
 twitter_username: iamramiawar 
 github_username:  RamiAwar
 
+
+google_analytics: UA-64766998-3
+
 # Build settings
 markdown: kramdown
 theme: minima
