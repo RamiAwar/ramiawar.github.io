@@ -35,7 +35,7 @@ defaults:
   -
     scope:  
       path: ""
-      type: "post"
+      type: "posts"
     values:
       layout: "page"
       permalink: "/:categories/:title"
