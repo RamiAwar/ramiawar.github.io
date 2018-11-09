@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href="./hangman.css">
+  </head>
+  <body>
+    <div>
+      <p id="guessText"></p>
+      <form name="theForm">
+      <div id='theInputs'>
+        <input name="guess" type="text" size="5" maxlength="1" id='theGuess'>
+        <input name="ratebutton" type="button" value="Guess" onClick="checkLetter()" id='guessButton'>
+      </form>
+      </div>
+    <p id="guessedCorLettern">Wrong Letters:</p>    
+    </div>
+  
+  
+  </body>
+  <p>Hint:  One of the four elements of western culture </p>
+  <script>
+  var words = [
+    ['E', 'A', 'R', 'T' , 'H'],
+
+  ];
+
+  var random = Math.floor((Math.random()*(words.length-1)));
+  var randomWord = words[random];
+  var checkWord = new Array(randomWord.length);
+  var wrongGuess = 0;
+
+  for (var i = 0; i < checkWord.length; i++){
+    checkWord[i] = "_ ";
+  }
+
+  function printGuesses(){
+    for (var i = 0; i < checkWord.length; i++){
+      var guessText = document.getElementById("guessText");
+      var CorLetter = document.createTextNode(checkWord[i]);
+      guessText.appendChild(CorLetter);
+    }
+  }
+
+  var checkLetter = function(){
+    var f = document.theForm;
+    var b = f.elements["guess"];
+    var guessedLetter = b.value; // the letter provided by the user
+    guessedLetter = guessedLetter.toUpperCase();
+    for (var i = 0; i < randomWord.length; i++){
+      if(randomWord[i] === guessedLetter){
+        checkWord[i] = guessedLetter + " ";
+        var correct = true;
+      }
+      b.value = "";
+    }
+
+    var guessText = document.getElementById("guessText");
+    guessText.innerHTML="";
+    printGuesses();
+
+    if(!correct){
+      var guessedCorLettern = document.getElementById("guessedCorLettern");
+      var CorLetter = document.createTextNode(" " + guessedLetter);
+      guessedCorLettern.appendChild(CorLetter);
+      wrongGuess++;
+    }
+
+    var checkifComplete = true;
+    for (var i = 0; i < checkWord.length; i++){
+      if(checkWord[i] === "_ "){
+        checkifComplete = false;
+      }
+    }
+    if(checkifComplete){
+      window.alert("You win!");
+    }
+
+    if(wrongGuess === 6){
+      window.alert("You lose...");
+    }
+  }
+
+  function start(){
+    printGuesses();
+  }
+
+window.onload = start;
+  </script>
+</html>

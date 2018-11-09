@@ -13,7 +13,7 @@ Many great writeups about autoencoders have already been made, so I'll just refe
 
 ## Variational Autoencoders (VAE)
 
-Variational autoencoders have a similar network structure to simple denoising autoencoders, but the difference is that they impose a second constraint (other than the reconstruction loss) on their means of constructing their latent representation. This constraint is a similarity to a prior distribution defined by the inputs. Now instead of using the entire latent space to generate samples, the space has been warped to give higher chances of selection to more 'realistic' samples, and by that I mean those that are consistent with the input distribution. For example if our input distribution was a Gaussian distribution with mean 0 and standard deviation 1, then generating a sample with a value of 100 should happen with very lose probability. 
+Variational autoencoders have a similar network structure to simple denoising autoencoders, but the difference is that they impose a second constraint (other than the reconstruction loss) on their means of constructing their latent representation. This constraint is a similarity to a prior distribution defined by the inputs. Now instead of using the entire latent space to generate samples, the space has been warped to give higher chances of selection to more 'realistic' samples, and by that I mean those that are consistent with the input distribution. For example if our input distribution was a Gaussian distribution with mean 0 and standard deviation 1, then generating a sample with a value of 100 should happen with very low probability. 
 
 An interesting image was created by the OpenAI team in their [**blog post**][openai-generative] on generative models. They're basically comparing the generated distribution to the true data distribution, and stating that with this new constraint, training the network will cause the generated distribution to morph into that of the true data. 
 
@@ -31,6 +31,10 @@ Let $z$ be the generated latent vector, and $q(z\|x)$ be our encoder. Introducin
 $$ L(x, y) = L_r (x, y) + D(q(z|x) || p(z)) $$
 
 For more details on how we actually use relative entropy here (tricks are needed since minimization is intractable) checkout the "Probability Model Perspective" portion of [**this post**][jaan]
+
+
+
+
 
 
 ## Adversarial Autoencoders (AAE)

@@ -1,0 +1,192 @@
+body {
+  background-color: white;
+}
+/* Start of Weight Converter */
+
+.Wheaders {
+  font-family: Futura;
+  text-align: center;
+}
+
+.Wfirsthalf {
+  width: 49%;
+  height: 100%;
+  display: inline-block;
+  float: left;
+}
+
+.Wsecondhalf {
+  width: 49%;
+  height: 100%;
+  display: inline-block;
+  float: right;
+}
+
+.v1 {
+  border-left: 5px solid black;
+  height: 655px;
+  display: inline-block;
+  width: 1%;
+  margin-top: -20px;
+  margin-left: -5px;
+}
+
+#Wlb {
+  margin-left: 5%;
+  height: 30px;
+  width: 80%;
+  text-align: center;
+  font-family: Futura;
+  display: inline-block;
+  border: 0.5px solid black;
+  border-radius: 2px;
+}
+
+#Wkg {
+  margin-left: 5%;
+  height: 30px;
+  width: 80%;
+  text-align: center;
+  font-family: Futura;
+  display: inline-block;
+  border: 0.5px solid black;
+  border-radius: 2px;
+}
+
+.Wbothres {
+  margin-left: 5%;
+  height: 30px;
+  width: 80%;
+  text-align: center;
+  display: inline-block;
+  font-family: Futura;
+}
+
+/* End of Weight Converter */
+/* Start of BMI Calculator */
+
+#weight {
+  width: 40%;
+  margin-left: 5%;
+  height: 30px;
+  text-align: center;
+  font-family: Futura;
+  display: inline-block;
+  border: 0.5px solid black;
+  border-radius: 2px;
+}
+
+#height {
+  width: 40%;
+  height: 30px;
+  margin-left: 5%;
+  text-align: center;
+  font-family: Futura;
+  display: inline-block;
+  border: 0.5px solid black;
+  border-radius: 2px;
+}
+
+#Bresult {
+  font-family: Futura;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: -10px;
+}
+
+#Bresults {
+  font-family: Futura;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: -10px;
+}
+
+.Bheader {
+  font-family: Futura;
+  text-align: center;
+}
+
+/* End of BMI Calculator */
+/* Start of Caesar Cipher */
+
+.Ctophalf {
+  width: 100%;
+  height: 49%;
+  margin-top: -20px;
+  display: inline-block;
+}
+
+.Ctophalf h1 {
+  text-align: center;
+  font-family: Futura;
+}
+
+#toEncrypt {
+  width: 40%;
+  margin-left: 30px;
+  margin-right: 20px;
+  text-align: center;
+  height: 30px;
+  font-family: Futura;
+  border: 0.5px solid black;
+  border-radius: 2px;
+}
+
+.Cbottomhalf {
+  height: 49%;
+  display: none;
+}
+
+#encryptKey {
+  width: 20%;
+  text-align: center;
+  height: 30px;
+  font-family: Futura;
+  border: 0.5px solid black;
+  border-radius: 2px;
+}
+
+#encryptresult {
+  margin-left: 10px;
+  font-family: Futura;
+}
+
+#encryptSubmit {
+  margin-left: 20px;
+  height: 30px;
+  font-family: Futura;
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: #D6D6D6;
+}
+
+/* End of Caesar Cipher */
+/* Start of Rock, Paper, Scissors */
+
+.rps {
+  background-color: #555;
+  text-align: center;
+  font-family: Futura;
+  color: white;
+  width: 20%;
+  height: 30px;
+  border: 1px solid black;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.rps:hover {
+  background-color: lightgrey;
+  color: black;
+}
+
+#paper {
+  margin-left: 75px;
+}
+
+.rpsText {
+  text-align: center;
+  font-family: Futura;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html5>
+<html>
+<head>
+  <title> Web and App Design </title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+<div class="nav-bar-fixed">
+  <nav>
+    <div class='nav-bar'>
+      <ul>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="code.html">Code</a></li>
+        <li><a id='currentpage'> Projects </a></li
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="projectlist">
+  <ul>
+    <li><a href='#' onclick="change4()"> Rock, Paper, Scissors (Mohamad Katerji)</a></li>
+    <li><a href='#' onclick="change1()"> Weight Converter (Omar Mardini) </a></li>
+    <li><a href='#' onclick="change2()"> BMI Calculator (Adnan Sidani)</a></li>
+</div>
+
+<div class='codetext' id='div1'>
+  <iframe id='ifrm'></iframe>
+</div>
+
+<script>
+var el = document.getElementById('ifrm');
+function change1() {
+    el.src = './Projects/weightconv.html';
+}
+function change2() {
+    el.src = './Projects/BMIcalc.html';
+}
+function change3() {
+  el.src = './Projects/csrcipher.html';
+}
+function change4() {
+  el.src = './Projects/rps.html';
+}
+</script>
+
+</body>
+
+</html>

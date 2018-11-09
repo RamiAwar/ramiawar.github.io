@@ -1,0 +1,63 @@
+<html>
+<head>
+  <link rel='stylesheet' href='../CSS/iframes.css'>
+</head>
+<body>
+<button id="paper" onclick="paper()" class='rps'> Paper </button>
+<button id="rock" onclick="rock()" class='rps'> Rock </button>
+<button id="scissors" onclick="scissors()" class='rps'> Scissors </button>
+<button  onclick="window.location.reload();" class='rps'> Restart </button>
+
+  <p id='BotChoice' class="rpsText"></p>
+  <p id="result" class="rpsText"></p>
+<script>
+    var Bot = ['rock', 'paper', 'scissors'];
+    var BotChoice = Bot[Math.floor(Math.random() * 3)];
+    console.log(BotChoice);
+    function rock() {
+        document.getElementById('BotChoice').innerHTML = 'The Bot chose ' + BotChoice;
+        if (BotChoice == 'rock') {
+        document.getElementById('result').innerHTML = 'It is a tie.';
+          }
+        if (BotChoice == 'scissors') {
+        document.getElementById('result').innerHTML = 'You win.';
+          }
+        if (BotChoice == 'paper') {
+        document.getElementById('result').innerHTML = 'You lose.';
+          }
+        document.getElementById('paper').style.display = 'none';
+        document.getElementById('scissors').style.display = 'none';
+
+    }
+    function paper() {
+        document.getElementById('BotChoice').innerHTML = 'The Bot chose ' + BotChoice;
+        if (BotChoice == 'rock') {
+        document.getElementById('result').innerHTML = 'You win.';
+          }
+        if (BotChoice == 'scissors') {
+        document.getElementById('result').innerHTML = 'You lose.';
+          }
+        if (BotChoice == 'paper') {
+        document.getElementById('result').innerHTML = 'It is a tie.';
+          }
+        document.getElementById('rock').style.display = 'none';
+        document.getElementById('scissors').style.display = 'none';
+
+    }
+    function scissors() {
+        document.getElementById('BotChoice').innerHTML = 'The Bot chose ' + BotChoice;
+        if (BotChoice == 'scissors') {
+        document.getElementById('result').innerHTML = 'It is a tie.';
+          }
+        if (BotChoice == 'rock') {
+        document.getElementById('result').innerHTML = 'You lose.';
+          }
+        if (BotChoice == 'paper') {
+        document.getElementById('result').innerHTML = 'You win.';
+          }
+        document.getElementById('paper').style.display = 'none';
+        document.getElementById('rock').style.display = 'none';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<link rel='stylesheet' href='../CSS/codetext.css'>
+<body>
+  <div class='wallotext'>
+<p>
+  var height = document.getElementById('height').value <br>
+  var weight = document.getElementById('weight').value <br>
+  height /= 100 <br>
+  var result = (weight/(height*height)) <br>
+  if (Number(result) && result !== Infinity) { <br>
+    document.getElementById('Bresult').innerHTML = result.toFixed(2) <br>
+  } <br>
+  if (result !== Infinity){ <br>
+    if (result < 18.5) { <br>
+      document.getElementById('Bresults').innerHTML = 'You are underweight' <br>
+    } <br>
+    if (result > 18.5 && result < 24.9) { <br>
+      document.getElementById('Bresults').innerHTML = 'You are healthy' <br>
+    } <br>
+    if (result > 24.9 && result < 29.9) {
+      document.getElementById('Bresults').innerHTML = 'You are overweight' <br>
+    } <br>
+    if (result > 30) { <br>
+      document.getElementById('Bresults').innerHTML = 'You are obese' <br>
+    } <br>
+  } <br>
+ }<br>
+</p>
+
+</div>
+</body>
+</html>

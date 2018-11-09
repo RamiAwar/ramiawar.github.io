@@ -1,0 +1,134 @@
+body {
+  background-color: #303030;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.nav-bar {
+    width: 100%;
+    background-color: #555 ;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.nav-bar li a {
+    float: right;
+    text-align: center;
+    width: 10%;
+    display: inline-block;
+    padding: 22px;
+    color: white;
+    font-family: Futura;
+    text-decoration: none;
+    background-color: transparent;
+    transition: all 0.3s ease;
+
+}
+
+.nav-bar li a:visited {
+    text-decoration: none;
+    background-color: transparent;
+
+}
+
+.nav-bar li a:hover {
+    background-color: #000
+
+}
+
+.projectlist {
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+.projectlist ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 2px solid white;
+  margin-top: -1px;
+  background-color: #555;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  width: 30%;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.projectlist li {
+  text-align: center;
+}
+
+.projectlist li a {
+  padding: 12px;
+  text-align: center;
+  display: block;
+  color: white;
+  font-family: Futura;
+  text-decoration: none;
+  background-color: transparent;
+  border-bottom: 0.1px solid white;
+  transition: background-color 0.3s ease;
+}
+
+.projectlist li a:visited {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.projectlist li a:hover {
+  background-color: #000;
+  }
+
+#currentpage {
+  float: left;
+  text-align: center;
+  background-color: black;
+  width: 15%;
+  color: white;
+  font-family: Futura;
+  text-decoration: none;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+#result {
+  color:white;
+}
+
+.codetext iframe {
+  display: grid;
+  width: 70%;
+  height: 45%;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  margin-top: 150px;
+}
+
+@keyframes FadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+
+}
+
+.codetext {
+  display: block;
+  margin-top: -300px;
+  margin-left: 500px;
+  animation-name: FadeIn;
+  animation-duration: 1s;
+  ani
+}

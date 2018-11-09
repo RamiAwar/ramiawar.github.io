@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> BMI Calculator</title>
+    <link rel="stylesheet" href="../CSS/iframes.css">
+  </head>
+  <body>
+    <h1 class="Bheader"> BMI Calculator </h1>
+    <div>
+    <input type="number" placeholder="Weight in Kg" id='weight' min="0" onchange="bmi()">
+    <input type="number" placeholder="Height in cm" id='height'min="0" onchange="bmi()">
+  </div>
+    <div id="Bresultdiv">
+      <p id='Bresult'></p>
+      <p id='Bresults'></p>
+    </div>
+  </body>
+  <script>
+  function bmi() {
+    var height = document.getElementById('height').value
+    var weight = document.getElementById('weight').value
+    height /= 100
+    var result = (weight/(height*height))
+    if (Number(result) && result !== Infinity) {
+      document.getElementById('Bresult').innerHTML = result.toFixed(2)
+    }
+    if (result !== Infinity){
+      if (result < 18.5) {
+        document.getElementById('Bresults').innerHTML = 'You are underweight'
+      }
+      if (result > 18.5 && result < 24.9) {
+        document.getElementById('Bresults').innerHTML = 'You are healthy'
+      }
+      if (result > 24.9 && result < 29.9) {
+        document.getElementById('Bresults').innerHTML = 'You are overweight'
+      }
+      if (result > 30) {
+        document.getElementById('Bresults').innerHTML = 'You are obese'
+      }
+    }
+  }
+  </script>
+</html>
