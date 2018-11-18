@@ -108,7 +108,29 @@ A beam of such particles with a flux of $$3*10^8 m^{-2}s^{-1}$$ strikes a target
 
 Solution:
 
+Using the derivations in chapter 4, this exercise is solved by simply replacing values.
 
+$$
+dw = Nf\frac{d\sigma}{d\omega}\frac{dA}{L^2}
+$$
+
+We find the following:
+
+$$
+\theta = 90^{\circ}
+d\omega = sin(\theta)d\theta d\phi = d\theta d\phi \\ 
+d\sigma = \frac{a^2 cos(\frac{\theta}{2}) d\theta d\phi}{2sin^3(\frac{\theta}{2})} = a^2d\theta d\phi \\ 
+f = 3*10^8 m^{-2}s^{-1} (given) \\ 
+N = \frac{50*10^{-6} kg}{27*1.66*10^{-27}} = 1.115*10^{21}
+L = 0.6m (given)
+A = 400mm^2 = 400*10^{-6}m^2
+$$
+
+After replacement, we finally get:
+
+$$
+w = \frac{Nfa^2}{L^2} \int dA = \frac{Nfa^2 A}{L^2} = 8.1*10^3s^{-1}
+$$
 
 
 
