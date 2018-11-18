@@ -4,7 +4,16 @@ date:   2018-11-18 01:24:38 +0300
 categories: physics
 ---
 
-### Distance of Closest Approach Problem 
+## List of Problems:
+[Chapter 4 P12 - Classical Mechanics - T.Kibble, F.Berkshire](#c4p12)
+[Chapter 4 P29 - Classical Mechanics - T.Kibble, F.Berkshire](#c4p29)
+
+
+<p id="c4p12">
+</p>
+
+
+### Ch.4 P12 - Distance of Closest Approach Problem 
 
 A star of mass $$M$$ and radius $$R$$ is moving with velocity $$v$$ through a cloud of particles of density $$\rho$$. If all the particles that collide with the star are trapped by it, show that the mass of the star will increase at a rate
 
@@ -63,3 +72,55 @@ Finally:
 $$
 \frac{dM}{dt} = \pi\rho v(R^2 + \frac{2GMR}{v^2}). 
 $$
+
+
+<p id="c4p12">
+</p>
+
+### Ch.4 P29 - Distance of Closest Approach Problem 
+
+#### Part 1
+An $$\alpha$$ particle of energy 4keV ($$1eV = 1.6 * 10^{-19}J$$) is scattered by an aluminum atom through an angle of $$90^{\circ}$$. Calculate the distance of closest approach to the nucleus. (Atomic number of $$\alpha$$-particle = 2, atomic number of Al = 13, $$e = 1.6 * 10^{-19}C$$.)
+
+Solution:
+We know that: 
+
+$$
+b = a*cot(\frac{\theta}{2}), a = \frac{q_1*q_2}{4\pi\epsilon_0mv^2}cot(\frac{\theta}{2}) = \frac{(Z_\alpha e)(Z_{Al}e)}{4\pi\epsilon_0mv^2}cot(\frac{\theta}{2}) = \frac{Z_\alpha Z_{Al}e^2}{4\pi\epsilon_0mv^2}cot(\frac{\theta}{2})
+$$
+
+Also, we are given the energy of the $$\alpha$$-particle hence we can find $$mv^2$$ and replace to find $$a, b$$. 
+
+$$
+E = \frac{1}{2}mv^2 = 4keV \implies mv^2 = 8keV
+$$
+
+What remainds is to find the distance of closest approach. As in the previous exercise, we can find the distance of closest approach using the following formula since the same conservation laws apply:
+
+$$ 
+d = a + \sqrt{a^2 + b^2}
+$$
+
+This yields the required answer of $$1.13*10^{-11}m$$.
+
+#### Part 2
+A beam of such particles with a flux of $$3*10^8 m^{-2}s^{-1}$$ strikes a target containing $$50 mg$$ of aluminum. A detector of cross-sectional area $$400mm^2$$ is placed $$0.6m$$ from the target in a direction at right angles to the beam direction. Find the rate of detection of $$\alpha$$-particles. (Atomic mass of Al $$= 27u; 1u = 1.66*10^{-27}kg.$$)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
