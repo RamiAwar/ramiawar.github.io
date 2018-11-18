@@ -6,6 +6,7 @@ categories: physics
 
 ## List of Problems:
 [Chapter 4 P12 - Classical Mechanics - T.Kibble, F.Berkshire](#c4p12)
+
 [Chapter 4 P29 - Classical Mechanics - T.Kibble, F.Berkshire](#c4p29)
 
 
@@ -131,6 +132,7 @@ After replacement, we finally get:
 $$
 w = \frac{Nfa^2}{L^2} \int dA = \frac{Nfa^2 A}{L^2} = 8.1*10^3s^{-1}
 $$
+
 
 
 
