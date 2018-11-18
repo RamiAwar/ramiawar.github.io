@@ -1,13 +1,15 @@
 ---
-title:  "Classical Mechanics Problems"
+title:  "Classical Mechanics Problems/Solutions"
 date:   2018-11-18 01:24:38 +0300
 categories: physics
 ---
 
 ## List of Problems:
-[Chapter 4 P12 - Classical Mechanics - T.Kibble, F.Berkshire](#c4p12)
+[Chapter 4 Problem 12 - Classical Mechanics - T.Kibble, F.Berkshire](#c4p12)
 
-[Chapter 4 P29 - Classical Mechanics - T.Kibble, F.Berkshire](#c4p29)
+[Chapter 4 Problem 29 - Classical Mechanics - T.Kibble, F.Berkshire](#c4p29)
+
+[Chapter 5 Problem 11 - Classical Mechanics - T.Kibble, F.Berkshire](#c5p11)
 
 
 <p id="c4p12">
@@ -134,13 +136,83 @@ w = \frac{Nfa^2}{L^2} \int dA = \frac{Nfa^2 A}{L^2} = 8.1*10^3s^{-1}
 $$
 
 
+<p id="c5p11">
+</p>
 
+### Ch.4 Problem 11 - Electromagnetic Field Effect on Charged Particle
 
+#### Part 1
 
+Write down the equation of motion for a charged particle in uniform parallel electric and magnetic fields, both in the z-direction, and solve it given that the particle starts from the origin with velocity $$(v, 0, 0)$$.
 
+Solution:
 
+Given that:\\
+$$ \dot{\textbf{r}}_0 = (v, 0, 0)$$ \\
+$$ \textbf{r} = (0, 0, 0) $$\\
+$$ \textbf{E} = E\textbf{k} , \textbf{B} = B\textbf{k}$$
 
+We begin by writing down the equation of motion:
 
+$$
+m\ddot{\textbf{r}} = q\textbf{E} + q\dot{\textbf{r}}\wedge \textbf{B}
+$$
+
+Breaking it down we get the following ODEs:
+
+$$
+\ddot{x} = \frac{qB}{m}\dot{y}\\
+\ddot{y} = \frac{-qB}{m}\dot{x}\\
+\ddot{z} = \frac{qB}{m}
+$$
+
+To solve these differential equations, we use an extra variable $$\phi$$ such that:
+
+$$
+\phi = \dot{x}
+$$
+
+Then we get:
+
+$$
+\dot{\phi} = \frac{qB}{m}\dot{y}\\
+\ddot{\phi} = \frac{qB}{m}\ddot{y} = \frac{qB}{m}(\frac{-qB}{m}\phi)
+$$
+
+Which is equivalent to:
+
+$$
+\ddot{\phi} + (\frac{qB}{m})^2\phi = 0
+$$
+
+The solution to this ODE is simply $$\phi = v*cos(\frac{qB}{m}t)$$. (Constants found using initial position and velocity values given.)
+
+Hence:
+
+$$
+\dot{x} = v*cos(\frac{qB}{m}t)\\
+x = \frac{mv}{qB}sin(\frac{qB}{m}t)
+$$
+
+and:
+
+$$
+\dot{y} = -v*sin(\frac{qB}{m}t)\\
+y = \frac{mv}{qB}(cos(\frac{qB}{m}t) - 1) 
+$$
+
+as for $$\ddot{z}$$ it is simply:
+
+$$
+\dot{z} = \frac{qE}{m}t\\
+\ddot{z} = \frac{qE}{2m}t^2
+$$
+
+#### Part 2
+
+A screen is placed at $$x=a$$, where $$a<<mv/qB$$. Show that the locus of points of arrival of particles with given $$m$$ and $$q$$, but different speeds $$v$$, is approximately a parabola. How does this locus depend on $$m$$ and $$q$$?
+
+To be continued.
 
 
 
