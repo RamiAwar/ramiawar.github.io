@@ -74,10 +74,10 @@ $$
 $$
 
 
-<p id="c4p12">
+<p id="c4p29">
 </p>
 
-### Ch.4 P29 - Distance of Closest Approach Problem 
+### Ch.4 P29 - Scattering Problem 
 
 #### Part 1
 An $$\alpha$$ particle of energy 4keV ($$1eV = 1.6 * 10^{-19}J$$) is scattered by an aluminum atom through an angle of $$90^{\circ}$$. Calculate the distance of closest approach to the nucleus. (Atomic number of $$\alpha$$-particle = 2, atomic number of Al = 13, $$e = 1.6 * 10^{-19}C$$.)
@@ -106,7 +106,7 @@ This yields the required answer of $$1.13*10^{-11}m$$.
 #### Part 2
 A beam of such particles with a flux of $$3*10^8 m^{-2}s^{-1}$$ strikes a target containing $$50 mg$$ of aluminum. A detector of cross-sectional area $$400mm^2$$ is placed $$0.6m$$ from the target in a direction at right angles to the beam direction. Find the rate of detection of $$\alpha$$-particles. (Atomic mass of Al $$= 27u; 1u = 1.66*10^{-27}kg.$$)
 
-
+Solution:
 
 
 
