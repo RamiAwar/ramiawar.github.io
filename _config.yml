@@ -3,7 +3,7 @@ title: Rami Awar
 subtitle: 
 email: rami.awar.research@gmail.com
 description: A personal portfolio
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 author: Rami Awar
 street_address: Walter-Sedlmayr Platz 6
