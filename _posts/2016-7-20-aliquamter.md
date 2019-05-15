@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Tempus
-description: Feugiat amet tempus
-categories: blog
+title: Aliquamter
+description: Ipsum dolor sit amets
+categories: project
+nav-menu: true
 ---
 
 Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. 
