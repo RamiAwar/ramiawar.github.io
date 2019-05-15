@@ -1,6 +1,6 @@
 <section id="one" class="tiles">
   
-  {% for post in site.categories.blog limit:site.tiles-count %}
+  {% for post in site.categories.project limit:site.tiles-count %}
     {% if site.tiles-source == 'posts' %}
     <article>
       <span class="image">
@@ -8,7 +8,7 @@
       </span>
       <header class="major">
         <h3><a href="{{ post.url  | relative_url }}" class="link">{{ post.title }}</a></h3>
-        <p>{{ post.category }}</p>
+        <p>{{ post.description }}</p>
       </header>
     </article>
     {% endif %}

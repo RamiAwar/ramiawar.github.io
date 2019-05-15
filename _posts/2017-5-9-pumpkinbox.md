@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Etiam
-description: Feugiat amet tempus
-categories: Project
+title: PumpkinBox
+description: Computer Networks Course Project
+categories: project
+image: assets/images/pumpkin.png
 ---
 
 Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. 

@@ -1,8 +1,9 @@
 ---
 layout: post
 title: QuantInvest
-description: Ipsum dolor sit amets
+description: Quantitative Investment Management Platform
 categories: project
+image: assets/images/quantinvest-border.png
 ---
 
 Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. 

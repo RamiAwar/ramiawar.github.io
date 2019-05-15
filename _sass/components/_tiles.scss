@@ -27,7 +27,7 @@
 			@include padding(4em, 4em);
 			background-position: center;
 			background-repeat: no-repeat;
-			background-size: cover;
+			background-size: contain;
 			cursor: default;
 			height: 40vh;
 			max-height: 40em;
