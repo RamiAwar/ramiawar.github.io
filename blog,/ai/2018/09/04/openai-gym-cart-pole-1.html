@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Rami Awar</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="Simple solution to cart-pole problem of OpenAI gym using randomness">
+	<!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
+	<link rel="stylesheet" href="/assets/css/main.css" />
+	<!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
+	<!--[if lte IE 8]><link rel="stylesheet" href="/assets/css/ie8.css" /><![endif]-->
+</head>
+
+
+<body>
+
+    <!-- Wrapper -->
+<div id="wrapper">
+
+<!-- Header -->
+<header id="header">
+	<a href="" class="logo"><strong>Rami Awar</strong> <span></span></a>
+	<nav>
+		<a href="#menu">Menu</a>
+	</nav>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+	<ul class="links">
+        
+		    
+		
+		    
+		
+		    
+		
+		    
+		
+		    
+		
+		    
+		        <li><a href="/">Home</a></li>
+	    	
+		
+		    
+		
+		    
+		
+		    
+		
+		
+		    
+		
+		    
+		        <li><a href="/all_posts.html">All posts</a></li>
+		    
+		
+		    
+		        <li><a href="/blog.html">Blog</a></li>
+		    
+		
+		    
+		
+		    
+		        <li><a href="/elements.md.hidden">Elements</a></li>
+		    
+		
+		    
+		
+		    
+		        <li><a href="/landing.md.hidden">Landing</a></li>
+		    
+		
+		    
+		
+		    
+		        <li><a href="/projects.html">Projects</a></li>
+		    
+		
+	</ul>
+	<ul class="actions vertical">
+		<li><a href="contact.html" class="button special fit">Contact Me</a></li>
+		
+	</ul>
+</nav>
+ 
+    
+    
+<!-- Main -->
+<div id="main" class="alt">
+
+<!-- One -->
+<section id="one">
+	<div class="inner">
+		<header class="major">
+			<h1>OpenAI Gym: Cart-Pole - Part 1</h1>
+		</header>
+		<!-- <span class="image main"><img src="/assets/images/openai.png" alt="" /></span> -->
+		<p><h2 id="introduction-to-openais-gym">Introduction to OpenAI’s Gym</h2>
+
+<p>As an introduction to openai’s gym, I’ll be trying to tackle several environments in as many methods I know of, teaching myself reinforcement learning in the process. This first post will start by exploring the cart-pole environment and solving it using randomness. This will make more sense when you understand what ‘solving’ it means. I’m trying to solve the request for research problems posed by OpenAI on the cart pole environment to encourage people to explore it on their own <a href="https://openai.com/requests-for-research/#cartpole"><strong>Requests For Research Page</strong></a> .I’m assuming you already have gym installed. If not, follow the instructions at <a href="https://gym.openai.com/docs/#installation"><strong>OpenAI Gym Docs</strong></a></p>
+
+<h2 id="cart-pole">Cart-Pole</h2>
+
+<p>For every environment, I’ll be quickly describing the observations (outputs), the actions (inputs), and reward, while linking the github repo wiki page for that environment for more details.</p>
+
+<h1 id="cart-pole-wiki"><a href="https://github.com/openai/gym/wiki/CartPole-v0"><strong>Cart-Pole Wiki</strong></a></h1>
+
+<h4 id="observation">Observation</h4>
+
+<p>For cart-pole, we have an observation vector of length 4, containing:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Num</th>
+      <th>Observation</th>
+      <th>Min</th>
+      <th>Max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Cart Position</td>
+      <td>-2.4</td>
+      <td>2.4</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Cart Velocity</td>
+      <td>-Inf</td>
+      <td>Inf</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Pole Angle</td>
+      <td>~ -41.8°</td>
+      <td>~ 41.8°</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Pole Velocity At Tip</td>
+      <td>-Inf</td>
+      <td>Inf</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>This observation vector is outputted by the environment at every step/iteration.</p>
+
+<p>To get this observation, we need to feed the environment an action to then perform a step on.
+Generating a random action that complies with the type and shape of data needed as an input is as simple as calling the action_space.sample() method on the environment object. I’ll provide an <a href="#action-space-sample">example below</a>.</p>
+
+<h4 id="action">Action</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Num</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>Push cart to the left</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Push cart to the right</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="reward">Reward</h4>
+
+<p>Every step taken generates a reward of one, since we managed to balance the rod for longer.</p>
+
+<h4 id="termination-conditions">Termination Conditions</h4>
+
+<ol>
+  <li>Pole Angle is more than ±12°</li>
+  <li>Cart Position is more than ±2.4 (center of the cart reaches the edge of the display)</li>
+  <li>Episode length is greater than 200</li>
+</ol>
+
+<h4 id="solved-requirements">Solved Requirements</h4>
+
+<p>The episode is considered solved when the average reward is greater than or equal to 195 over 100 consecutive trials.</p>
+
+<p>These are all taken from the page linked above, for those of you who didn’t visit it.
+They simply describe the gym environment we chose to work on.</p>
+
+<p id="action-space-sample">
+	To get started, let's run the environment and render it after a random action. 
+</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">time</span> 
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s">'CartPole-v0'</span><span class="p">)</span> <span class="c1"># This creates our environment 
+</span>
+<span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span> <span class="c1"># Resetting environment conditions
+</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span> <span class="c1"># Take 100 frames
+</span>	
+	<span class="n">action</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">action_space</span><span class="o">.</span><span class="n">sample</span><span class="p">()</span> <span class="c1"># Choose random action from action space (i.e. random binary digit, which is the input to this environment signifying moving the cart right or moving it left.)
+</span>
+	<span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span> <span class="c1"># Apply action on environment and produce next states/observations
+</span>
+	<span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">()</span> <span class="c1"># Visualize environment
+</span>
+	<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">env</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></code></pre></figure>
+
+<p>Notice that this produces a warning saying that any steps after the simulation ends are meaningless, and for this we use the return values of <code class="highlighter-rouge">env.step(action)</code>.</p>
+
+<h2><br /></h2>
+<p><br /></p>
+
+<p><code class="highlighter-rouge">env.step(action)</code> returns four values:</p>
+
+<ol>
+  <li>Observation: object described previously, basically is the output of the environment, or the states in a sense.</li>
+  <li>Reward: amount of reward achieved by previous action.</li>
+  <li>Done: boolean indicating if episode is terminated. This should control when we stop issuing actions since they’d be meaningless if issued after <code class="highlighter-rouge">done</code> was returned <code class="highlighter-rouge">True</code>.</li>
+  <li>Info: diagnostic information useful for debugging, which should not be used for learning.</li>
+</ol>
+
+<p>These were taken from <a href="https://gym.openai.com/docs/#Observations"><strong>openai gym docs</strong></a>.</p>
+
+<p>We will use this <code class="highlighter-rouge">done</code> indicator in our first attempt at solving this environment.</p>
+
+<h2 id="-1"><br /></h2>
+<p><br /></p>
+
+<h2 id="solution-using-randomness">Solution using Randomness</h2>
+
+<p>As discussed above, to consider the episode solved, we need an average reward equal to or greater than 195. Note that if this only guarantees that no termination conditions be met within 200 frames only. The algorithm might fail one frame after that, but it would still be considered a successful solution according to the environment’s criteria. You can deduce that succeeding over 200 frames doesn’t guarantee that your model will keep the rod up in real life. For that, there are many control systems solutions, such as PIDs, root locus, state space, … None of these have anything to do with learning though, so they’re not intended solutions by OpenAI.</p>
+
+<p>Our observation vector x has four values, we define a weight vector w:</p>
+
+<p>$ \textbf{x} = [ a\quad b\quad c\quad d ] , \quad \textbf{w} = $
+<script type="math/tex">\begin{bmatrix}\alpha\\\beta\\\omega\\\zeta \end{bmatrix}</script></p>
+
+<p>What we will try to do is generate a prediction (0 or 1) moving us either left or right, depending on these parameters and the weight vector. To do this, we take the following function:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+f(x, w) = 
+     \begin{cases}
+       0 &\quad\text{if } \textbf{x}\cdot \textbf{w} < 0\\
+       1 &\quad\text{if } \textbf{x}\cdot \textbf{w} \geq 0\\
+     \end{cases} %]]></script>
+
+<p>Given enough trials and errors, there exists several weight vectors $ \textbf{w} $ which would result in the cart balancing the pole for at least 200 frames. We will find these weight vectors by iterating over randomly generated vectors and save one that satisfies our goal.</p>
+
+<p>Trying this out in code, we first define the function $f$:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+	<span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+		<span class="k">return</span> <span class="mi">1</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="k">return</span> <span class="mi">0</span></code></pre></figure>
+
+<p>Then we want to find the average performance (average reward) of a randomly generated 4-valued weight vector fed with $\textbf{x}$ to $f$. We don’t expect the first guess to work, so we’ll try a hundred guesses with an outer loop.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">gym</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s">"CartPole-v0"</span><span class="p">)</span>
+<span class="n">found</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="n">final_weights</span> <span class="o">=</span> <span class="bp">None</span> 
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>  <span class="c1"># Trying 100 guesses of weight vectors
+</span>
+    <span class="k">if</span> <span class="n">found</span><span class="p">:</span>
+        <span class="k">break</span>
+
+    <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>  <span class="c1"># Generate random weight vector
+</span>    <span class="n">reward_vector</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># Append total rewards per simulation to find average in the end
+</span>
+    <span class="c1"># Find average performance of this weight vector
+</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+
+        <span class="c1"># reset environment
+</span>        <span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
+        <span class="n">reward_count</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>  <span class="c1"># while we haven't succeeded or a termination condition was reached
+</span>
+            <span class="n">reward_count</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># keeping track to check success
+</span>
+            <span class="n">action</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>  <span class="c1"># generate action
+</span>            <span class="n">x</span><span class="p">,</span> <span class="n">reward</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>  <span class="c1"># take a step
+</span>
+        <span class="n">reward_vector</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">reward_count</span><span class="p">)</span>
+
+    <span class="n">reward_vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">reward_vector</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">reward_vector</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mi">195</span><span class="p">:</span>  <span class="c1"># Check success
+</span>        <span class="k">print</span><span class="p">(</span><span class="s">"Passing weight vector is "</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
+        <span class="n">found</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="n">final_weights</span> <span class="o">=</span> <span class="n">w</span></code></pre></figure>
+
+<p>What remains is seeing the performance of this solution. Appending the following code to our previous segment, we visualize the performance of this weight vector:</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">x</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>  <span class="c1"># Resetting environment conditions
+</span><span class="n">done</span> <span class="o">=</span> <span class="bp">False</span>
+
+<span class="k">while</span> <span class="ow">not</span> <span class="n">done</span><span class="p">:</span>  <span class="c1"># Take 100 frames
+</span>
+    <span class="n">action</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">final_weights</span><span class="p">)</span>
+
+    <span class="n">x</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">done</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">action</span><span class="p">)</span>
+
+    <span class="n">env</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>  <span class="c1"># Visualize environment
+</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.02</span><span class="p">)</span>  <span class="c1"># Delay for it not to be too fast
+</span>
+<span class="n">env</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>  <span class="c1"># Close visualization window</span></code></pre></figure>
+
+<p>As an additional note, you can save the simulation as an mp4 file using openai gym’s wrappers module. Add the following import, and the line after defining your <code class="highlighter-rouge">env</code> variable.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">gym</span> <span class="kn">import</span> <span class="n">wrappers</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s">'CartPole-v0'</span><span class="p">)</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="o">.</span>
+<span class="c1"># When recording is needed:
+</span><span class="n">env</span> <span class="o">=</span> <span class="n">wrappers</span><span class="o">.</span><span class="n">Monitor</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="s">'output_movie'</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+ <span class="o">.</span>
+ <span class="c1"># Perform simulation as usual, and every step will be recorded
+</span> <span class="o">.</span>
+ <span class="o">.</span></code></pre></figure>
+
+<p>With this basic introduction to gym and the cartpole environment, I’m ready to tackle a learning-based solution to this problem. I’ll be linking part 2 as soon as I get started.</p>
+
+</p>
+	</div>
+</section>
+
+
+
+
+
+
+
+</div>
+
+    
+<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				
+				<li><a href="https://twitter.com/iamramiawar" class="icon alt fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+				
+				
+				
+				
+				<li><a href="https://instagram.com/ramiawar" class="icon alt fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+				
+				
+				
+				
+				
+				<li><a href="https://github.com/RamiAwar" class="icon alt fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+				
+				
+				
+				<li><a href="https://www.linkedin.com/in/ramiawarco" class="icon alt fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+				
+			</ul>
+		</div>
+	</footer>
+
+</div>
+
+<!-- Scripts -->
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/jquery.scrolly.min.js"></script>
+	<script src="/assets/js/jquery.scrollex.min.js"></script>
+	<script src="/assets/js/skel.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="/assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="/assets/js/main.js"></script>
+
+
+
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+
+</body>
+
+</html>
