@@ -1,0 +1,25 @@
+---
+label: Project-template
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: text
+  name: description
+  label: description
+- type: list
+  name: categories
+  label: categories
+- type: file
+  name: image
+  label: image
+- type: file
+  name: pdf
+  label: pdf
+- type: list
+  name: videos
+  label: videos
