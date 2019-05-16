@@ -1,20 +1,21 @@
 <section id="one" class="tiles">
   
-  {% for post in site.categories.project limit:site.tiles-count %}
-    {% if site.tiles-source == 'posts' %}
+  {% assign projects = (site.projects | sort: 'date') | reverse %}
+
+  {% for post in projects limit:page.tiles-count %}
     <article>
       <span class="image">
         <img src="{{ post.image }}" alt="" />
       </span>
       <header class="major">
+
         <h3><a href="{{ post.url  | relative_url }}" class="link">{{ post.title }}</a></h3>
         <p>{{ post.description }}</p>
       </header>
     </article>
-    {% endif %}
   {% endfor %}
 
-
+<!-- 
   {% for page in site.pages limit:site.tiles-count %}
     {% if site.tiles-source == 'pages' and page.show_tile != false %}
     <article>
@@ -28,5 +29,7 @@
     </article>
     {% endif %}
   {% endfor %}
-  
+   -->
+
+   
 </section>

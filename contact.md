@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Contact
-nav-menu: true
+nav-menu: false
 ---
 
 <!-- Contact -->
@@ -68,12 +68,3 @@ nav-menu: true
 		</section>
 	</div>
 </section>
-
-<!-- Scripts -->
-<script src="{{ "assets/js/jquery.min.js" | absolute_url }}"></script>
-<script src="{{ "assets/js/jquery.scrolly.min.js" | absolute_url }}"></script>
-<script src="{{ "assets/js/jquery.scrollex.min.js" | absolute_url }}"></script>
-<script src="{{ "assets/js/skel.min.js" | absolute_url }}"></script>
-<script src="{{ "assets/js/util.js" | absolute_url }}"></script>
-<!--[if lte IE 8]><script src="{{ "assets/js/ie/respond.min.js" | absolute_url }}"></script><![endif]-->
-<script src="{{ "assets/js/main.js" | absolute_url }}"></script>

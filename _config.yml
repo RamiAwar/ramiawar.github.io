@@ -13,8 +13,15 @@ country: Germany
 phone: (49) 1512 4454954
 
 # homepage tiles
-tiles-source: posts # accepts "posts" or "pages"
+tiles-source: projects # accepts "posts" or "pages"
 tiles-count: 12
+
+collections:
+  posts:
+    output: true
+  projects:
+    output: true
+    permalink: "/projects/:path/"
 
 # social settings
 500px_url:

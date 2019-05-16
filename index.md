@@ -4,8 +4,8 @@ title: Home
 landing-title: Rami Awar
 description: 
 image: 
-author: 
+author: Rami Awar 
 show_tile: false
-
+tiles-count: 6
 ---
-Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.
+Currently a deep learning and software engineering intern at BMW Logistics Robotics Group in München, Germany. I'll be continuing my studies at the American University of Beirut in September. Feel free to contact me. 
