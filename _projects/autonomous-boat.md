@@ -10,9 +10,7 @@ categories:
 - game development
 image: "/assets/images/nightdrive.jpg"
 pdf: ''
-videos:
-- yp6Cl37HlTg
-- 3oYw3vUgXtw
+videos: []
 
 ---
 ### What is it?
