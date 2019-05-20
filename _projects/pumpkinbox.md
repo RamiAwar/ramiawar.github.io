@@ -1,14 +1,15 @@
 ---
 layout: post
-date: 2019-5-9
+date: 2017-05-09 08:33:00 +0000
 title: PumpkinBox
 description: Computer Networks Course Project
 categories: project, java, software, networking
-image: /assets/images/pumpkin.png
-pdf: /assets/pdfs/pumpkinbox_report.pdf 
-images: ["/assets/images/"]
----
+image: "/assets/images/pumpkin.png"
+pdf: "/assets/pdfs/pumpkinbox_report.pdf"
+images:
+- "/assets/images/"
 
+---
 PumpkinBox is an online game platform which hosts multiplayer games, and allows players to befriend each other and send game requests to each other, as well as track match statistics. This project was done as part of a first year course on computer networks.
 
 The platform was built in Java using JavaFX for the GUI, along with the jphoenix library for stylized UI components. The backend consists of a manually written web server which processes TCP requests and sends TCP responses which are then processed in the app itself. The java server was hosted on an AWS instance. The java client would then contact this instance through an assigned static IP and exposed port, and all traffic would go through that port. 
@@ -24,10 +25,3 @@ Communication from and to the server is encrypted using temporary generated toke
 {% include image.html file="pumpkinbox/game_screen_2.png" description="Game Screen" %}
 
 {% include image.html file="pumpkinbox/request_screen.png" description="Request Screen" %}
-
-
-
-
-
-
-
