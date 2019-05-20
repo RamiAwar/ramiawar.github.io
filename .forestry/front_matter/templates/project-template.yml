@@ -32,3 +32,5 @@ fields:
 - type: list
   name: videos
   label: videos
+pages:
+- _projects/autonomous-vision-based-vehicle.md
