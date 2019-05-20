@@ -23,3 +23,12 @@ fields:
 - type: list
   name: videos
   label: videos
+- name: date
+  type: datetime
+  label: Date
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  description: Project date
