@@ -1,13 +1,15 @@
 ---
 layout: post
 title: QuantInvest
-date: 2019-3-20
+date: 2019-03-19 23:00:00 +0000
 description: Quantitative Investment Management Platform
-categories: project, finance
-image: /assets/images/quantinvest-border.png
-pdf: /assets/pdfs/quantinvest_report.pdf
----
+categories:
+- project
+- finance
+image: "/assets/images/quantinvest-border.png"
+pdf: "/assets/pdfs/quantinvest_report.pdf"
 
+---
 QuantInvest is an online platform that helps investors explore the world of finance. The main features of the platform are a customizable portfolio optimizer, a stock screener and explorer, and a risk profiler. The live version of the project can be found at www.quantinvest.co. 
 
 The risk profiler is an interactive questionnaire that guides the client through finding acceptable risk and return values for their investment. The portfolio optimizer uses historical market data to generate a portfolio with the previously accepted expected return and risk values. The third component is a portfolio explorer that allows the user to view the fundamental and technical data that supports the inclusion of each stock in the portfolio, while also allowing the user to modify the portfolio and backtest it immediately.
