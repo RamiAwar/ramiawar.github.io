@@ -19,7 +19,7 @@ NightDrive is a threejs experiment and attempt to build a 3D game in the browser
 
 Mobile performance was severely affected when directed lights were added, but the effect was too beautiful to undo. Check it out at [NightDrive link](https://ramiawar.github.io/NightDrive).
 
-For more of my games, check out my itch.io page: [RamiAwar.itch.io](https://ramiawar.itch.io/)
+For more of my games, check out my itch.io page: [RamiAwar.itch.io](https://ramiawar.itch.io/) .
 
 ### Features
 
