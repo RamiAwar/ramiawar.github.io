@@ -12,7 +12,8 @@ categories:
 - project
 image: "/assets/images/autonomous_car/fig5.png"
 pdf: "/assets/pdfs/auto_car_report.pdf"
-videos: []
+videos:
+- 5YBKvhzpwfI
 published: false
 
 ---
