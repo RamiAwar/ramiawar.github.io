@@ -10,7 +10,7 @@
 	<title>Rami Awar</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta name="description" content="Engineering Design Challenge Entry">
+	<meta name="description" content="Quantitative Investment Management Platform">
 	<!--[if lte IE 8]><script src="/assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="/assets/css/main.css" />
 	<!--[if lte IE 9]><link rel="stylesheet" href="/assets/css/ie9.css" /><![endif]-->
@@ -82,12 +82,17 @@
 <section id="one">
 	<div class="inner">
 		<header class="major">
-			<h1>Autonomous Boat</h1>
+			<h1>QuantInvest</h1>
 		</header>
-		<!-- <span class="image main"><img src="//assets/images/boat.jpg" alt="" /></span> -->
-		<p><p>An Arduino MEGA based wooden boat, running on high performance batteries. This was created to compete in the American University of Beirut’s Robotics Club organized Engineering Design Challenge 1.0 . The boat is controlled with high torque motors guided by 3 ultrasonic sensors running a proportional control algorithm to maintain a constant direction from side walls. Below are some videos taken during construction.</p>
+		<!-- <span class="image main"><img src="//assets/images/quantinvest-border.png" alt="" /></span> -->
+		<p>20th March 2019
+		<p><p>QuantInvest is an online platform that helps investors explore the world of finance. The main features of the platform are a customizable portfolio optimizer, a stock screener and explorer, and a risk profiler. The live version of the project can be found at www.quantinvest.co.</p>
 
-<p>Acknowledgments:  This project wouldn’t have been possible without the construction and brainstorming skills of Tarek Tohme, and Alexandre Megarbane’s swimming skills 😄.</p>
+<p>The risk profiler is an interactive questionnaire that guides the client through finding acceptable risk and return values for their investment. The portfolio optimizer uses historical market data to generate a portfolio with the previously accepted expected return and risk values. The third component is a portfolio explorer that allows the user to view the fundamental and technical data that supports the inclusion of each stock in the portfolio, while also allowing the user to modify the portfolio and backtest it immediately.</p>
+
+<p>Technically speaking, the system is written in Python using the Flask microframework, running a Gunicorn web server. The lengthy jobs are processed using a message queuing server, where scalable workers pickup jobs upon availability and return the results to the queue. The frontend submits these requests and awaits responses using AJAX requests. The frontend is designed using vanilla HTML, CSS, and Javascript, and uses the Argon framework as a layout foundation. More details on software architecture can be found in the build report below.</p>
+
+<p>The above mentioned features can be tried out at <a href="http://www.quantinvest.co">QuantInvest</a>.</p>
 </p>
 	</div>
 </section>
@@ -103,7 +108,7 @@
 		<header class="major">
 			<h2> Associated PDFs </h2>
 		</header>
-		<object data="/assets/pdfs/pumpkinbox_report.pdf" width="100%" height="800" type='application/pdf'/>		
+		<object data="/assets/pdfs/quantinvest_report.pdf" width="100%" height="800" type='application/pdf'/>		
 	</div>
 </section>
 
