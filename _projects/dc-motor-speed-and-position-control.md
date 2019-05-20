@@ -23,5 +23,3 @@ This is a second year engineering control systems project, for a course given by
 For both speed and position control, proportional, PID, lag-lead, and full-state feedback controllers are investigated, and experimental results from a Quanser Qube Servo that nearly matches the mathematical model are compared with simulation results from that model.
 
 The PID controller design in both systems meets the requirements with the least error and is thus chosen as the final design.
-
-Below are some demonstration videos.
