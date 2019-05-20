@@ -8,6 +8,15 @@ fields:
 - type: text
   name: title
   label: title
+- name: date
+  type: datetime
+  label: Date
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  description: Project date
 - type: text
   name: description
   label: description
