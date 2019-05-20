@@ -15,6 +15,14 @@ videos:
 - 3oYw3vUgXtw
 
 ---
+### What is it?
+
+NightDrive is a threejs experiment and attempt to build a 3D game in the browser. It consists of a procedurally generated car and dynamic lighting, moving alone an endless round road, where procedurally generated trees and collectables spawn randomly and make avoiding trees and collecting objects more difficult as the levels increase.
+
+Mobile performance was severely affected when directed lights were added, but the effect was too beautiful to undo. Check it out at [NightDrive link](https://ramiawar.github.io/NightDrive).
+
+For more of my games, check out my itch.io page: [RamiAwar.itch.io](https://ramiawar.itch.io/)
+
 ### Features
 
 * Game framework from scratch, with collision detection and different performance settings
