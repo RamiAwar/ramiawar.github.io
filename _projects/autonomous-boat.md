@@ -37,3 +37,7 @@ For more of my games, check out my itch.io page: [RamiAwar.itch.io](https://rami
 * Adding fuel tank collectables
 * Adding touch and keyboard controls
 * Experimenting with sphere instead of cylinder for a ground, allowing for more freedom in movement and a super-mario galaxy planet movement mechanic.
+
+![](/assets/images/nightdrive_3.jpg)
+
+![](/assets/images/nightdrive_1.jpg)![](/assets/images/nightdrive_2.jpg)
