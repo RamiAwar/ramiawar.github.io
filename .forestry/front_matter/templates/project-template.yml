@@ -33,5 +33,6 @@ fields:
   name: videos
   label: videos
 pages:
+- _projects/dc-motor-speed-and-position-control.md
 - _projects/zoya-and-ekon.md
 - _projects/autonomous-vision-based-vehicle.md
