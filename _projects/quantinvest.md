@@ -1,6 +1,7 @@
 ---
 layout: post
 title: QuantInvest
+date: 2019-3-20
 description: Quantitative Investment Management Platform
 categories: project, finance
 image: /assets/images/quantinvest-border.png

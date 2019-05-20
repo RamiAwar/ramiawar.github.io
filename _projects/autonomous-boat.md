@@ -1,41 +1,19 @@
 ---
 layout: post
-title: Night Drive
-description: Personal project
+title: Autonomous Boat
+date: 2016-5-9
+description: Engineering Design Challenge Entry
 categories:
 - project
-- threejs
-- web
-- javascript
-- game development
-image: "/assets/images/nightdrive.jpg"
-pdf: ''
-videos: []
+- robotics
+- arduino
+image: "/assets/images/boat.jpg"
+pdf: "/assets/pdfs/pumpkinbox_report.pdf"
+videos:
+- yp6Cl37HlTg
+- 3oYw3vUgXtw
 
 ---
-### What is it?
+An Arduino MEGA based wooden boat, running on high performance batteries. This was created to compete in the American University of Beirut's Robotics Club organized Engineering Design Challenge 1.0 . The boat is controlled with high torque motors guided by 3 ultrasonic sensors running a proportional control algorithm to maintain a constant direction from side walls. Below are some videos taken during construction.
 
-NightDrive is a threejs experiment and attempt to build a 3D game in the browser. It consists of a procedurally generated car and dynamic lighting, moving alone an endless round road, where procedurally generated trees and collectables spawn randomly and make avoiding trees and collecting objects more difficult as the levels increase.
-
-Mobile performance was severely affected when directed lights were added, but the effect was too beautiful to undo. Check it out at [NightDrive link](https://ramiawar.github.io/NightDrive).
-
-For more of my games, check out my itch.io page: [RamiAwar.itch.io](https://ramiawar.itch.io/)
-
-### Features
-
-* Game framework from scratch, with collision detection and different performance settings
-* Procedurally generated clouds, trees, and collectable items
-* Basic car model built from primitive threejs elements. Complicated shapes are created using boolean operations on these primitives. No 3D modelling program was used.
-* Dynamic lighting which is attached to the car, with its position and orientation updated each frame.
-* Easily animatable car with all parts constructed from separate classes.
-
-### Future Work
-
-* More performance improvements by limiting collision checks, making lighting controllable from settings menu, controlling shadows from settings menu, controlling camera settings from settings menu...
-* Adding fuel tank collectables
-* Adding touch and keyboard controls
-* Experimenting with sphere instead of cylinder for a ground, allowing for more freedom in movement and a super-mario galaxy planet movement mechanic.
-
-![](/assets/images/nightdrive_3.jpg)
-
-![](/assets/images/nightdrive_1.jpg)![](/assets/images/nightdrive_2.jpg)
+Acknowledgments:  This project wouldn't have been possible without the construction and brainstorming skills of Tarek Tohme, and Alexandre Megarbane's swimming skills 😄.
