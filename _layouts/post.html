@@ -28,7 +28,7 @@
 </section>
 
 
-{% if page.videos %}
+{% if len(page.videos) > 0 %}
 <section id="two">
 	
 	<div class="inner">
@@ -43,7 +43,7 @@
 {% endif %}
 
 
-{% if page.pdf %}
+{% if page.pdf != "" %}
 <section id="three">
 	
 	<div class="inner">
