@@ -2,7 +2,7 @@
 layout: post
 title: Zoya and Ekon
 date: 2017-08-11T22:00:00.000+00:00
-description: Unity3D Gamejam Submission
+description: Unity3D Local Gamejam Submission
 categories:
 - illustration
 - animation
