@@ -3,8 +3,8 @@ title: Rami Awar
 subtitle: 
 email: rami.awar.research@gmail.com
 description: A personal portfolio
-baseurl: "" # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
+baseurl: ""
+url: "https://ramiawar.github.io"
 author: Rami Awar
 street_address: Walter-Sedlmayr Platz 6
 city: Munich
@@ -40,3 +40,6 @@ markdown: kramdown
 
 sass:
   style: compressed
+
+plugins:
+  - jekyll-sitemap
