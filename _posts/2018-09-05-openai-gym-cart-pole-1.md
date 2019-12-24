@@ -1,13 +1,12 @@
 ---
-layout: post 
-title:  "OpenAI Gym: Cart-Pole - Part 1"
-date:   2018-09-05 01:24:38 +0300
+layout: post
+title: 'OpenAI Gym: Cart-Pole - Part 1'
+date: 2018-09-04T22:24:38.000+00:00
 categories: blog, ai
 description: Simple solution to cart-pole problem of OpenAI gym using randomness
 image: assets/images/openai.png
+
 ---
-
-
 ## Introduction to OpenAI's Gym 
 
 As an introduction to openai's gym, I'll be trying to tackle several environments in as many methods I know of, teaching myself reinforcement learning in the process. This first post will start by exploring the cart-pole environment and solving it using randomness. This will make more sense when you understand what 'solving' it means. I'm trying to solve the request for research problems posed by OpenAI on the cart pole environment to encourage people to explore it on their own [**Requests For Research Page**][request-research] .I'm assuming you already have gym installed. If not, follow the instructions at [**OpenAI Gym Docs**][docs-installation]
@@ -235,4 +234,3 @@ With this basic introduction to gym and the cartpole environment, I'm ready to t
 [wiki-link]: https://github.com/openai/gym/wiki/CartPole-v0
 [gym-docs]: https://gym.openai.com/docs/#Observations
 [docs-installation]: https://gym.openai.com/docs/#installation
-    
