@@ -16,7 +16,7 @@ categories:
 A very brief overview of discrete vs continuous signals: continuous signals are signals we find in the real world, that are made up of an infinite stream of "samples" or values that are infinitesimally close to each other in time. When we try to measure these real signals, we are constrained by our measuring instruments. A discrete time signal is finite set of samples, which restrains us to knowing the value of the signal at discrete instants in time, and not for all time. For example, take a continuous sine wave:
 
 $$
-x(t) = sin(2\\pi f_0t)
+x(t) = sin(2\pi f_0t)
 $$
 
 It's frequency $$f_0$$ is measured in hertz (Hz), which is the number of cycles per second. $$f_0t$$ gives the number of cycles in fraction form, and multiplying by $$2\\pi$$ gives us the number of cycles in fraction form in radians.
