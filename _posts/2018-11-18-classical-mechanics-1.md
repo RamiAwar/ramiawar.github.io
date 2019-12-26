@@ -4,6 +4,8 @@ title: "Classical Mechanics Problems/Solutions"
 description: Ipsum dolor sit amet
 date:   2018-11-18 01:24:38 +0300
 categories: [blog, physics]
+pdf: none
+
 ---
 
 ## List of Problems:

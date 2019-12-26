@@ -1,9 +1,9 @@
-I"((<h2 id="discrete-signals">Discrete Signals</h2>
-<!-- [Chapter 4 Problem 12 - Classical Mechanics - T.Kibble, F.Berkshire](#c4p12)
- -->
+I"�&<h2 id="list-of-problems">List of Problems:</h2>
+<p><a href="#c4p12">Chapter 4 Problem 12 - Classical Mechanics - T.Kibble, F.Berkshire</a></p>
 
-<p>A very brief overview of discrete vs continuous signals: continuous signals are signals we find in the real world, that are made up of an infinite stream of “samples” or values that are infinitesimally close to each other in time. When we try to measure these real signals, we are constrained by our measuring instruments. A discrete time signal is finite set of samples, which restrains us to knowing the value of the signal at discrete instants in time, and not for all time. For example, take a continuous sine wave:
-<script type="math/tex">x(t) = sin(2\pi f_0t)</script></p>
+<p><a href="#c4p29">Chapter 4 Problem 29 - Classical Mechanics - T.Kibble, F.Berkshire</a></p>
+
+<p><a href="#c5p11">Chapter 5 Problem 11 - Classical Mechanics - T.Kibble, F.Berkshire</a></p>
 
 <p id="c4p12">
 </p>
@@ -161,5 +161,4 @@ y = \frac{mv}{qB}(cos(\frac{qB}{m}t) - 1)</script>
 a<<mv/qB %]]></script>. Show that the locus of points of arrival of particles with given <script type="math/tex">m</script> and <script type="math/tex">q</script>, but different speeds <script type="math/tex">v</script>, is approximately a parabola. How does this locus depend on <script type="math/tex">m</script> and <script type="math/tex">q</script>?</p>
 
 <p>To be continued.</p>
-
 :ET

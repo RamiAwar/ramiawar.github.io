@@ -1,0 +1,196 @@
+I"r6<h2 id="discrete-signals">Discrete Signals</h2>
+
+<!-- [Chapter 4 Problem 12 - Classical Mechanics - T.Kibble, F.Berkshire](#c4p12)
+\-->
+
+<p>A very brief overview of discrete vs continuous signals: continuous signals are signals we find in the real world, that are made up of an infinite stream of “samples” or values that are infinitesimally close to each other in time. When we try to measure these real signals, we are constrained by our measuring instruments. A discrete time signal is finite set of samples, which restrains us to knowing the value of the signal at discrete instants in time, and not for all time. For example, take a continuous sine wave:</p>
+
+<script type="math/tex; mode=display">x(t) = sin(2\pi f_0t)</script>
+
+<p>It’s frequency <script type="math/tex">f_0</script> is measured in hertz (Hz), which is the number of cycles per second. <script type="math/tex">f_0t</script> gives the number of cycles in fraction form, and multiplying by <script type="math/tex">2\\pi</script> gives us the number of cycles in fraction form in radians.</p>
+
+<p>To measure the signal, we must ‘sample’ the continuous time signal and then combine these samples to form the discrete time signal. Below is an example of both the continuous time signal and its sampled version. In the figure, the signal is sampled every <script type="math/tex">t_s</script> seconds.</p>
+
+<p><img style="     margin: 0 auto;     display: block;" src="/assets/images/DSP_sampling/sine_continuous_discrete.jpg" alt="Sine wave - Continuous vs. Discrete" /><br />
+<span style=" 	text-align:center;     margin: 0 auto;     display: block;" class="caption">Sine wave - Continuous vs. Discrete</span></p>
+
+<p>In this post, we will be discussing this sampling operation in more detail, and that is by trying to answer one question: How well does the sampled signal represent the true signal? This is a very important consideration, as if the representation was not good enough, alot of information will be lost, and those losses may be intolerable in some cases.</p>
+
+<h2 id="signal-ambiguity">Signal Ambiguity</h2>
+
+<p>Assume we had a 7 Hz sine wave, that we sampled at 6 Hz. That is, six cycles per second for a seven cycles per second signal. We will unavoidably have some information loss since this is a discretization operation in the first place, but here we also risk losing signal representation. Let’s see the result:</p>
+
+<p><img style="     margin: 0 auto;     display: block;" src="/assets/images/DSP_sampling/7hz@6hz.png" alt="Sampled 7 Hz sine wave at 6 Hz (blue squares), Continuous 7 Hz sine wave (red)" /><br />
+<span style=" 	text-align:center;     margin: 0 auto;     display: block;" class="caption">Sampled 7 Hz sine wave at 6 Hz (blue squares), Continuous 7 Hz sine wave (red)</span></p>
+
+<p>Note that the above continuous signal is not really continuous, just sampled at a much higher rate to make it appear to be for the sake of this example. So far this seems fine, maybe a not so great representation of our signal, but it doesn’t seem like a deal breaker yet. Now let’s consider another signal sampled at the same rate, specifically a 1 Hz sine wave sampled at 6 Hz. Below is the result:</p>
+
+<p><img style="     margin: 0 auto;     display: block;" src="/assets/images/DSP_sampling/1hz@6hz.png" alt="Sampled 1 Hz sine wave at 6 Hz (blue squares), Continuous 1 Hz sine wave (red)" /><br />
+<span style=" 	text-align:center;     margin: 0 auto;     display: block;" class="caption">Sampled 1 Hz sine wave at 6 Hz (blue squares), Continuous 1 Hz sine wave (red)</span></p>
+
+<p>This is what the two signal overlayed look like:</p>
+
+<p><img style="     margin: 0 auto;     display: block;" src="/assets/images/DSP_sampling/7hz,1hz@6hz.png" alt="Sampled 1 Hz and 7 Hz sine waves at 6 Hz (blue squares), Continuous 1 Hz and 7 Hz sine waves (red and green accordingly)" /><br />
+<span style=" 	text-align:center;     margin: 0 auto;     display: block;" class="caption">Sampled 1 Hz and 7 Hz sine waves at 6 Hz (blue squares), Continuous 1 Hz and 7 Hz sine waves (red and green accordingly)</span></p>
+
+<p>Notice that the two signals overlayed have the exact same samples, which we now see is a deal breaker.</p>
+
+<p>Jumping to more complex interpretations of signals, we can examine their “frequency components”.</p>
+
+<p id="c4p12">
+</p>
+
+<h3 id="ch4-p12---distance-of-closest-approach-problem">Ch.4 P12 - Distance of Closest Approach Problem</h3>
+
+<p>A star of mass <script type="math/tex">M</script> and radius <script type="math/tex">R</script> is moving with velocity <script type="math/tex">v</script> through a cloud of particles of density <script type="math/tex">\\rho</script>. If all the particles that collide with the star are trapped by it, show that the mass of the star will increase at a rate</p>
+
+<script type="math/tex; mode=display">\\frac{dM}{dt} = \\pi\\rho v(R^2 + \\frac{2GMR}{v^2}).</script>
+
+<p>Solution:</p>
+
+<p>It is easier to use a moving reference frame with velocity v, centered at the star. This allows for mathematical convenience in dealing with the problem. Thus the star is stationary, and dust particles are moving towards it with velocity <script type="math/tex">v</script>.</p>
+
+<p>We want to try to find a thin cylinder whose axis lies along the axis of movement of the star, in which all the particles lying inside it will collide with the star after a time differential <script type="math/tex">dt</script>. So what we start with is basically finding the minimum distance of approach of any particle, since the star’s gravitational field attracts particles in all directions. If this distance of approach is less than <script type="math/tex">R</script>, then we know there will be a collision. From there we can enforce the largest acceptable distance of approach to be <script type="math/tex">R</script>, and hence find the radius of the cylinder slab for which all particles inside will collide with the star.</p>
+
+<p>By the law of conservation of energy and that of angular momentum under central conservative forces, we have the following radial energy equation:</p>
+
+<script type="math/tex; mode=display">E = \\frac{1}{2}mv^2 = \\frac{1}{2}\\dot{r}^2 + \\frac{J^2}{2mr^2} - \\frac{GMm}{r}</script>
+
+<p>Plugging in <script type="math/tex">\\dot{r} = 0</script> since we want the closest distance of approach, and rearranging this we get:</p>
+
+<script type="math/tex; mode=display">r^2 - 2ar + b^2 = 0, a = \\frac{-GMm}{rmv^2}</script>
+
+<p>Which yields:</p>
+
+<script type="math/tex; mode=display">r = \\frac{-GM}{v^2} + \\sqrt{(\\frac{GM}{v^2})^2 + b^2}</script>
+
+<p>Rearranging then squaring both sides yields:</p>
+
+<script type="math/tex; mode=display">b^2 = r^2 + \\frac{2GMr}{v^2}</script>
+
+<p>Where <script type="math/tex">b</script> is the impact parameter. From here, we realize that the maximum closest distance of approach acceptable to guarantee a collision is <script type="math/tex">R</script>. Hence, the maximum impact parameter that guarantees a collision satisfies the equation:</p>
+
+<script type="math/tex; mode=display">b_{max}^2 = R^2 + \\frac{2GMR}{v^2}</script>
+
+<p>Visualizing the impact parameter, we see that all particles with impact parameters less than <script type="math/tex">b_{max}</script> will collide with the star, hence all particles in a cylinder of surface area <script type="math/tex">\\pi b_{max}^2</script> and height <script type="math/tex">vdt</script> will collide with the star in a time differential <script type="math/tex">dt</script>. Multiplying this volume with the density <script type="math/tex">\\rho</script> we get the mass that will be added to the star in a time differential <script type="math/tex">dt</script>.</p>
+
+<p><img style="     margin: 0 auto;     display: block;" src="/assets/images/impact_parameter.png" alt="Impact parameter visualized - Wikipedia" /><br />
+<span style=" 	text-align:center;     margin: 0 auto;     display: block;" class="caption">Impact parameter visualized - Wikipedia</span></p>
+
+<p>Combining this yields the required equation:</p>
+
+<script type="math/tex; mode=display">dM = \\pi\\ \\rho(vdt)\\ b_{max}^2 = \\pi\\  \\rho(vdt)\\ (R^2 + \\frac{2GMR}{v^2})</script>
+
+<p>Finally:</p>
+
+<script type="math/tex; mode=display">\\frac{dM}{dt} = \\pi\\rho v(R^2 + \\frac{2GMR}{v^2}).</script>
+
+<p id="c4p29">
+</p>
+
+<p>###</p>
+
+<p>An <script type="math/tex">\\alpha</script> particle of energy 4keV (<script type="math/tex">1eV = 1.6 * 10^{-19}J</script>) is scattered by an aluminum atom through an angle of <script type="math/tex">90^{\\circ}</script>. Calculate the distance of closest approach to the nucleus. (Atomic number of <script type="math/tex">\\alpha</script>-particle = 2, atomic number of Al = 13, <script type="math/tex">e = 1.6 * 10^{-19}C</script>.)</p>
+
+<p>Solution:
+We know that:</p>
+
+<script type="math/tex; mode=display">b = a_cot(\\frac{\\theta}{2}), a = \\frac{q_1_q_2}{4\\pi\\epsilon_0mv^2}cot(\\frac{\\theta}{2}) = \\frac{(Z_\\alpha e)(Z_{Al}e)}{4\\pi\\epsilon_0mv^2}cot(\\frac{\\theta}{2}) = \\frac{Z_\\alpha Z_{Al}e^2}{4\\pi\\epsilon_0mv^2}cot(\\frac{\\theta}{2})</script>
+
+<p>Also, we are given the energy of the <script type="math/tex">\\alpha</script>-particle hence we can find <script type="math/tex">mv^2</script> and replace to find <script type="math/tex">a, b</script>.</p>
+
+<script type="math/tex; mode=display">E = \\frac{1}{2}mv^2 = 4keV \\implies mv^2 = 8keV</script>
+
+<p>What remainds is to find the distance of closest approach. As in the previous exercise, we can find the distance of closest approach using the following formula since the same conservation laws apply:</p>
+
+<script type="math/tex; mode=display">d = a + \\sqrt{a^2 + b^2}</script>
+
+<p>This yields the required answer of <script type="math/tex">1.13*10^{-11}m</script>.</p>
+
+<h4 id="part-2">Part 2</h4>
+
+<p>A beam of such particles with a flux of <script type="math/tex">3_10^8 m^{-2}s^{-1}</script> strikes a target containing <script type="math/tex">50 mg</script> of aluminum. A detector of cross-sectional area <script type="math/tex">400mm^2</script> is placed <script type="math/tex">0.6m</script> from the target in a direction at right angles to the beam direction. Find the rate of detection of <script type="math/tex">\\alpha</script>-particles. (Atomic mass of Al <script type="math/tex">= 27u; 1u = 1.66_10^{-27}kg.</script>)</p>
+
+<p>Solution:</p>
+
+<p>Using the derivations in chapter 4, this exercise is solved by simply replacing values.</p>
+
+<script type="math/tex; mode=display">dw = Nf\\frac{d\\sigma}{d\\omega}\\frac{dA}{L^2}</script>
+
+<p>We find the following:</p>
+
+<script type="math/tex; mode=display">\\theta = 90^{\\circ}
+d\\omega = sin(\\theta)d\\theta d\\phi = d\\theta d\\phi \\
+d\\sigma = \\frac{a^2 cos(\\frac{\\theta}{2}) d\\theta d\\phi}{2sin^3(\\frac{\\theta}{2})} = a^2d\\theta d\\phi \\
+f = 3_10^8 m^{-2}s^{-1} (given) \\
+N = \\frac{50_10^{-6} kg}{27_1.66_10^{-27}} = 1.115_10^{21}
+L = 0.6m (given)
+A = 400mm^2 = 400_10^{-6}m^2</script>
+
+<p>After replacement, we finally get:</p>
+
+<script type="math/tex; mode=display">w = \\frac{Nfa^2}{L^2} \\int dA = \\frac{Nfa^2 A}{L^2} = 8.1*10^3s^{-1}</script>
+
+<p id="c5p11">
+</p>
+
+<h3 id="ch4-problem-11---electromagnetic-field-effect-on-charged-particle">Ch.4 Problem 11 - Electromagnetic Field Effect on Charged Particle</h3>
+
+<h4 id="part-1">Part 1</h4>
+
+<p>Write down the equation of motion for a charged particle in uniform parallel electric and magnetic fields, both in the z-direction, and solve it given that the particle starts from the origin with velocity <script type="math/tex">(v, 0, 0)</script>.</p>
+
+<p>Solution:</p>
+
+<p>Given that:<br />
+<script type="math/tex">\\dot{\\textbf{r}}_0 = (v, 0, 0)</script> <br />
+<script type="math/tex">\\textbf{r} = (0, 0, 0)</script><br />
+<script type="math/tex">\\textbf{E} = E\\textbf{k} , \\textbf{B} = B\\textbf{k}</script></p>
+
+<p>We begin by writing down the equation of motion:</p>
+
+<script type="math/tex; mode=display">m\\ddot{\\textbf{r}} = q\\textbf{E} + q\\dot{\\textbf{r}}\\wedge \\textbf{B}</script>
+
+<p>Breaking it down we get the following ODEs:</p>
+
+<script type="math/tex; mode=display">\\ddot{x} = \\frac{qB}{m}\\dot{y}\\
+\\ddot{y} = \\frac{-qB}{m}\\dot{x}\\
+\\ddot{z} = \\frac{qB}{m}</script>
+
+<p>To solve these differential equations, we use an extra variable <script type="math/tex">\\phi</script> such that:</p>
+
+<script type="math/tex; mode=display">\\phi = \\dot{x}</script>
+
+<p>Then we get:</p>
+
+<script type="math/tex; mode=display">\\dot{\\phi} = \\frac{qB}{m}\\dot{y}\\
+\\ddot{\\phi} = \\frac{qB}{m}\\ddot{y} = \\frac{qB}{m}(\\frac{-qB}{m}\\phi)</script>
+
+<p>Which is equivalent to:</p>
+
+<script type="math/tex; mode=display">\\ddot{\\phi} + (\\frac{qB}{m})^2\\phi = 0</script>
+
+<p>The solution to this ODE is simply <script type="math/tex">\\phi = v*cos(\\frac{qB}{m}t)</script>. (Constants found using initial position and velocity values given.)</p>
+
+<p>Hence:</p>
+
+<script type="math/tex; mode=display">\\dot{x} = v*cos(\\frac{qB}{m}t)\\
+x = \\frac{mv}{qB}sin(\\frac{qB}{m}t)</script>
+
+<p>and:</p>
+
+<script type="math/tex; mode=display">\\dot{y} = -v*sin(\\frac{qB}{m}t)\\
+y = \\frac{mv}{qB}(cos(\\frac{qB}{m}t) - 1)</script>
+
+<p>as for <script type="math/tex">\\ddot{z}</script> it is simply:</p>
+
+<script type="math/tex; mode=display">\\dot{z} = \\frac{qE}{m}t\\
+\\ddot{z} = \\frac{qE}{2m}t^2</script>
+
+<h4 id="part-2-1">Part 2</h4>
+
+<p>A screen is placed at <script type="math/tex">x=a</script>, where <script type="math/tex">% <![CDATA[
+a<<mv/qB %]]></script>. Show that the locus of points of arrival of particles with given <script type="math/tex">m</script> and <script type="math/tex">q</script>, but different speeds <script type="math/tex">v</script>, is approximately a parabola. How does this locus depend on <script type="math/tex">m</script> and <script type="math/tex">q</script>?</p>
+
+<p>To be continued.</p>
+:ET
