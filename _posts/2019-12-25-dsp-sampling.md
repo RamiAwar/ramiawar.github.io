@@ -1,11 +1,11 @@
 ---
 layout: post
 title: DSP - Sampling
-description: What is a digital signal? What is sampling? What is aliasing? How to prevent aliasing?
+description: What is a digital signal? What is sampling? What is aliasing?
 date: 2019-12-23T22:24:38.000+00:00
 categories:
 - blog
-- dsp
+- control
 pdf: none
 
 ---
