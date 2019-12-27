@@ -56,6 +56,9 @@ The derived equation tells us that signals with frequencies $$f_0$$ Hz and $$f_0
 
 {% include image.html file="DSP_sampling/1hz,5hz@4hz.png" description="Sampled 1 Hz and 5 Hz sine waves at 4 Hz (blue squares), Continuous 1 Hz and 5 Hz sine waves (red and green accordingly)" %}
 
+Now there exists a mathematically proven condition that allows for perfect reconstruction of the signals from samples, and that is to sample at twice the highest frequency in the signal. So to be able to fully reconstruct the true 1 Hz sine wave for example, we should sample at a frequency larger than 2 Hz. More formally, "If a function $$ x(t) $$ contains no frequencies higher than $$B$$ hertz, it is completely determined by giving its ordinates at a series of points spaced $$\frac{1}{2B}$$ seconds apart." This is called the Nyquist-Shannon sampling theorem, and to look understand the proof we must first cover frequency domain transformations. I'll try to do that in a future post.
+
+
 
 
 
