@@ -20,7 +20,7 @@ $$
 x(t) = sin(2\pi f_0t)
 $$
 
-It's frequency $$f_0$$ is measured in hertz (Hz), which is the number of cycles per second. $$f_0t$$ gives the number of cycles in fraction form, and multiplying by $$2\\pi$$ gives us the number of cycles in fraction form in radians.
+It's frequency $$f_0$$ is measured in hertz (Hz), which is the number of cycles per second. $$f_0t$$ gives the number of cycles in fraction form, and multiplying by $$2\pi$$ gives us the number of cycles in fraction form in radians.
 
 To measure the signal, we must 'sample' the continuous time signal and then combine these samples to form the discrete time signal. Below is an example of both the continuous time signal and its sampled version. In the figure, the signal is sampled every $$t_s$$ seconds.
 
