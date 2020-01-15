@@ -4,7 +4,7 @@ title: "Selecting Cat Names: A Scientific Approach"
 description: A few guidelines on how to select cat names using phonetic rules, psychology, and a quick auditory analysis.
 date:   2020-01-15 01:24:38 +0300
 categories: [blog, misc]
-pdf: "assets.pdfs/selecting_cat_names_scientifically.pdf"
+pdf: "assets/pdfs/selecting_cat_names_scientifically.pdf"
 
 ---
 
