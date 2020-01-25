@@ -25,10 +25,11 @@ First, you import a video by choosing a file. After confirming the video choice,
 ## Usage Instructions
 Refer to the github repository for more details, source code, and issue and milestone tracking. [Github Repo](github.com/RamiAwar/VidNote).
 
-{% include image.html file="vidnote/vidnote_logo.png" description="Logo" %}
 
 {% include image.html file="vidnote/vidnote1.jpg" description="Choose video" %}
 
 {% include image.html file="vidnote/vidnote2.jpg" description="Main screen" %}
 
 {% include image.html file="vidnote/vidnote3.jpg" description="Annotation creation" %}
+
+{% include image.html file="vidnote/vidnote_logo.png" description="Logo" %}
