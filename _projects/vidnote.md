@@ -9,7 +9,7 @@ categories:
 - software
 - nodejs
 - web
-image: "/assets/images/vidnote_logo.png"
+image: "/assets/images/vidnote/vidnote_logo.png"
 pdf: ''
 images:
 - "/assets/images/"
