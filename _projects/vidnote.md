@@ -15,18 +15,20 @@ images:
 - "/assets/images/"
 
 ---
-PumpkinBox is an online game platform which hosts multiplayer games, and allows players to befriend each other and send game requests to each other, as well as track match statistics. This project was done as part of a first year course on computer networks.
 
-The platform was built in Java using JavaFX for the GUI, along with the jphoenix library for stylized UI components. The backend consists of a manually written web server which processes TCP requests and sends TCP responses which are then processed in the app itself. The java server was hosted on an AWS instance. The java client would then contact this instance through an assigned static IP and exposed port, and all traffic would go through that port. 
+VidNote is a video annotation cross-platform application. Annotations can be audio, text, or even video annotations. Work in progress.
 
-Communication from and to the server is encrypted using temporary generated tokens. Security was considered but was not of utmost importance, so no advanced cryptography was applied as that wasn't the focus of the platform. The messaging API between the client and server is described in more detail in the build report. Below are some screenshots of the application. 
+## How it works
 
-<!-- {% include image.html file="pumpkinbox/login_screen.png" description="Login Window" %}
+First, you import a video by choosing a file. After confirming the video choice, a new window appears, enclosing a video player with volume and seeking features, and basic controls. On the right, you have the annotations list. To add a new annotation at a specific frame of the video, press the add annotation button when the video is at that specific moment. You can do that while the video is playing or paused for more accuracy. When a new annotation is added, a .anot file gets created in the same directory as the video that was imported, allowing for importing these annotations again in the future. A thumbnail of the frame is also saved in the .anot file, along with other needed metadata. To view the annotations at a later time, simply load the video back into the application and the .anot file will automatically be imported if it exists in the same directory.
 
-{% include image.html file="pumpkinbox/home_screen.png" description="Home Screen" %}
+## Usage Instructions
+Refer to the github repository for more details, source code, and issue and milestone tracking. [Github Repo](github.com/RamiAwar/VidNote).
 
-{% include image.html file="pumpkinbox/chat_screen.png" description="Chat Window" %}
+{% include image.html file="vidnote/vidnote_logo.png" description="Logo" %}
 
-{% include image.html file="pumpkinbox/game_screen_2.png" description="Game Screen" %}
+{% include image.html file="vidnote/vidnote1.jpg" description="Choose video" %}
 
-{% include image.html file="pumpkinbox/request_screen.png" description="Request Screen" %} -->
+{% include image.html file="vidnote/vidnote2.jpg" description="Main screen" %}
+
+{% include image.html file="vidnote/vidnote3.jpg" description="Annotation creation" %}
