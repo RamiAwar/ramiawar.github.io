@@ -7,4 +7,4 @@ image:
 author: Rami Awar
 show_tile: false
 ---
-Currently a deep learning and software engineering intern at BMW Logistics Robotics Group in München, Germany. I'll be continuing my studies at the American University of Beirut in September. Feel free to contact me.
+Junior software engineer with a specialization in machine learning. Feel free to contact me.
