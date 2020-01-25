@@ -10,7 +10,7 @@ categories:
 - javascript
 - game development
 image: "/assets/images/nightdrive.jpg"
-pdf: ''
+pdf: 'none'
 videos: []
 
 ---

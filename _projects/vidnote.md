@@ -10,7 +10,7 @@ categories:
 - nodejs
 - web
 image: "/assets/images/vidnote/vidnote_logo.png"
-pdf: ''
+pdf: 'none'
 images:
 - "/assets/images/"
 

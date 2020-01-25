@@ -10,7 +10,7 @@ categories:
 - 3d modelling
 - game development
 image: "/assets/images/zoya_and_ekon_1.jpg"
-pdf: ''
+pdf: 'none'
 videos: []
 
 ---
