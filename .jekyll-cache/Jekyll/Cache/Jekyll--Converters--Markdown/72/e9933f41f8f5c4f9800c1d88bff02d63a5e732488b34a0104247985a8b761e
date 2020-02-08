@@ -1,8 +1,0 @@
-I"1<h3 id="what-is-this">What is this?</h3>
-
-<p>This is a second year engineering control systems project, for a course given by Dr. Naseem Daher at the American University of Beirut ( EECE 460). In this project, my team and I presented multiple controller designs for both the speed and position control of a direct-current motor, while abiding to requirements set in order to control an engraving laser.</p>
-
-<p>For both speed and position control, proportional, PID, lag-lead, and full-state feedback controllers are investigated, and experimental results from a Quanser Qube Servo that nearly matches the mathematical model are compared with simulation results from that model.</p>
-
-<p>The PID controller design in both systems meets the requirements with the least error and is thus chosen as the final design.</p>
-:ET
