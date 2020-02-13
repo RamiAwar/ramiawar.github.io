@@ -20,7 +20,7 @@ pdf: 'none'
 This is an implementation of the route planner project in Udacity's C++ Nanodegree. Using IO2D (C++ graphics library) and OSM (OpenStreetMap) data and pugixml, A* search is implemented on abstracted classes out of the OSM data. Below are the results on some maps.
 
 {% include image.html file="route_planner/map1.jpeg" description="Path planning on map of Beirut, Lebanon." %}
-{% include image.html file="route_planner/map.png" %}
+<!-- {% include image.html file="route_planner/map.png" %} -->
 
 
 ### Challenges
