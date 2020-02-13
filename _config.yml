@@ -14,7 +14,7 @@ phone: (49) 1512 4454954
 
 # homepage tiles
 tiles-source: projects # accepts "posts" or "pages"
-tiles-count: 20
+tiles-count: 100
 
 collections:
   posts:
