@@ -2,15 +2,16 @@
 title: Rami Awar
 subtitle: 
 email: rami.awar.research@gmail.com
-description: A personal portfolio
+name: Rami Awar 
+description: Personal Blog
 baseurl: ""
 url: "https://ramiawar.github.io"
 author: Rami Awar
-street_address: Walter-Sedlmayr Platz 6
-city: Munich
-zip_code: 80995
-country: Germany
-phone: (49) 1512 4454954
+street_address: Beirut
+city: Beirut
+zip_code: N/A
+country: Lebanon
+phone: 000 000000
 
 # homepage tiles
 tiles-source: projects # accepts "posts" or "pages"
@@ -22,6 +23,37 @@ collections:
   projects:
     output: true
     permalink: "/projects/:path/"
+
+# Use the following plug-ins
+plugins:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+
+include: ['_pages']
+
+disqus: pumpkinbox
+
+avatar: /assets/images/profile_cropped.png
+
+footer-links:
+  dribbble:
+  email: rami.awar.ra@gmail.com
+  facebook:
+  flickr:
+  github: RamiAwar
+  instagram: ramiawar
+  linkedin: ramiawarco
+  pinterest:
+  rss: rss
+  twitter: iamramiawar  
+  stackoverflow: 
+  youtube: # channel/<your_long_string> or user/<user-name>
+  googleplus: # anything in your profile username that comes after plus.google.com/
+  playconsole:
+
 
 # social settings
 500px_url:
@@ -35,9 +67,20 @@ pinterest_url:
 slack_url:
 twitter_url: https://twitter.com/iamramiawar
 
+
+
 # build settings
 markdown: kramdown
 
 sass:
   style: compressed
 
+
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
