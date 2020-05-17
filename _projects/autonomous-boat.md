@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title: Autonomous Boat
 date: 2016-5-9
 description: Engineering Design Challenge Entry

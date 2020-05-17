@@ -1,7 +1,7 @@
 ---
-layout: post
+layout: blog_post
 title: "Classical Mechanics Problems/Solutions"
-description: Ipsum dolor sit amet
+description: Solutions of exercises from a classical mechanics book
 date:   2018-11-18 01:24:38 +0300
 categories: [blog, physics]
 pdf: none

@@ -1,0 +1,18 @@
+I"�<h3 id="what-is-it">What is it?</h3>
+
+<p>A mobile robot with differential drive that navigates purely using computer vision.</p>
+
+<h3 id="challenges">Challenges</h3>
+
+<ul>
+  <li>Lane following using a live image stream</li>
+  <li>Architecture of control system and electronics</li>
+</ul>
+
+<h3 id="solutions">Solutions</h3>
+
+<ul>
+  <li>Using a Raspberry-Pi camera fitted with a fish eye lens, an algorithm that processes the images from the video feed was developed which allowed the vehicle to stay centered while navigating. This algorithm is described in the PDF below, but basically tries to equalize the distance between the car’s center of vision and both lanes, in the process staying in the center.</li>
+  <li>The architecture chosen was a Raspberry Pi controller that acted as the high level controller and vision processor, which then communicated via serial commands to an Arduino. The Arduino’s API provided methods to control the motors, read from sensors, and in the process isolate the RPi from potential power failures. The RPi got it’s power from a commercial power bank, while the motors and Arduino were powered from lithium ion battery packs.</li>
+</ul>
+:ET

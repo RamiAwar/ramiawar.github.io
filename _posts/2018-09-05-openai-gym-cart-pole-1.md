@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title: 'OpenAI Gym: Cart-Pole - Part 1'
 date: 2018-09-04T22:24:38.000+00:00
 categories: blog, ai

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title: Route Planner C++
 date: 2020-02-14T23:00:00.000+00:00
 description: Open Street Map C++ Route Planner

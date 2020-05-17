@@ -27,9 +27,41 @@ layout: default
     {{ content }}
   </div>
 
+  {% if page.videos.size > 0 %}
+  <section id="two">
+    
+    <div class="inner">
+      <header class="major">
+        <h2> Associated Videos </h2>
+      </header>
+      {% for video in page.videos %}
+        <iframe style="max-width: 100%" width="100%" height="500" src="https://www.youtube.com/embed/{{video}}" frameborder="0" allowfullscreen></iframe>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+
+  {% if page.pdf != "none" %}
+  <section id="three">
+    
+    <div class="inner">
+      <header class="major">
+        <h2> Associated PDFs </h2>
+      </header>
+      <object data="{{ page.pdf }}" width="100%" height="800" type='application/pdf'>
+        <p>Your web browser doesn't have a PDF plugin.
+          Instead you can <a href="{{ page.pdf }}">click here to
+          download the PDF file.</a></p>
+        </object>   
+    </div>
+  </section>
+  {% endif %}
+
   <div>
     <p><span class="share-box">Share:</span> <a href="http://twitter.com/share?text={{ page.title }}&url={{site.url}}{{page.url}}" target="_blank">Twitter</a>, <a href="https://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" target="_blank">Facebook</a></p>
   </div>
+
 
   <!--<div class="date">
     Written on {{ page.date | date: "%B %e, %Y" }}

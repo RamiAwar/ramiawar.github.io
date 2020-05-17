@@ -1,0 +1,41 @@
+I"á<h3 id="what-is-it">What is it?</h3>
+
+<p>This is an implementation of the route planner project in Udacityâ€™s C++ Nanodegree. Using IO2D (C++ graphics library) and OSM (OpenStreetMap) data and pugixml, A* search is implemented on abstracted classes out of the OSM data. Below are the results on some maps.</p>
+
+<div style="margin-top:10px; margin-bottom:10px;">
+	<img style="
+    margin: 0 auto;
+    display: block;" src="/assets/images/route_planner/map1.jpeg" alt="Path planning on map of Beirut, Lebanon." />  
+	<span style="
+	text-align:center;
+    margin: 0 auto;
+    display: block;" class="caption">Path planning on map of Beirut, Lebanon.</span>
+
+</div>
+<!-- <div style="margin-top:10px; margin-bottom:10px;">
+	<img style="
+    margin: 0 auto;
+    display: block;" src="/assets/images/route_planner/map.png" alt="">  
+	<span style="
+	text-align:center;
+    margin: 0 auto;
+    display: block;" class="caption"></span>
+
+</div> -->
+
+<h3 id="challenges">Challenges</h3>
+
+<ul>
+  <li>Parsing OpenStreetMap xml data into C++ classes</li>
+  <li>Creating traversable nodes out of OpenStreetMap data</li>
+  <li>Implementing A* search algorithm on parsed data</li>
+</ul>
+
+<h3 id="solutions">Solutions</h3>
+
+<ul>
+  <li>Using pugixml to parse XML file into several classes. Only a subset of the OSM data was read, as that is what interests us for path finding.</li>
+  <li>Used IO2D to render the OSM data in C++</li>
+  <li>Implemented A* search algorithm using C++ and integrated it with OSM data</li>
+</ul>
+:ET

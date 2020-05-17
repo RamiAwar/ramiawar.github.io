@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 date: 2018-10-09 08:33:00 +0000
 title: VidNote
 description: Software Architecture Course Project

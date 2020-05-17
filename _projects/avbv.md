@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title: Autonomous Vision Based Vehicle
 date: 2018-01-26T23:00:00.000+00:00
 description: Engineering Design Challenge Entry
