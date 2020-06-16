@@ -1,0 +1,28 @@
+I"$<h3 id="what-is-it">What is it?</h3>
+
+<p>A desktop application development framework that allows for the development of C++ applications with a GUI and Renderer (Only OpenGL backend supported so far, but architecture leaves room for Vulkan, Metal, or DirectX extensions).</p>
+
+<h3 id="features">Features</h3>
+
+<ul>
+  <li>Custom type-agnostic Entity Component System that utilizes virtual memory and custom allocators</li>
+  <li>Dockable ImGui based GUI with custom components</li>
+  <li>Profiling classes (Adapted to chrome tracing, and built with a live graph viewer)</li>
+  <li>2D Custom batch renderer</li>
+  <li>Minimal dependencies on other libraries</li>
+</ul>
+
+<h3 id="future-work">Future Work</h3>
+
+<p>The engine is still far from usable to create games. Work in progress.</p>
+<ul>
+  <li>Functional game example</li>
+  <li>Visual game creation capabilities</li>
+  <li>Scripting language</li>
+  <li>Game exporting</li>
+  <li>Update linux, macosx support (one month late)</li>
+</ul>
+
+<p><img src="/assets/images/game_engine/engine_01.jpg" alt="" /></p>
+
+:ET
