@@ -1,9 +1,10 @@
 ---
 layout: blog_post
 title: "Poisson Disk Sampling"
+permalink: /blog/poisson-disk-sampling/
 description: An implementation based review of poisson disk sampling methods
 date:   2020-07-25 01:24:38 +0300
-categories: [blog, mathematics, game-dev]
+categories: [mathematics, game-dev]
 pdf: none
 ---
 

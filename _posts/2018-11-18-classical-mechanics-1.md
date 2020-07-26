@@ -3,7 +3,7 @@ layout: blog_post
 title: "Classical Mechanics Problems/Solutions"
 description: Solutions of exercises from a classical mechanics book
 date:   2018-11-18 01:24:38 +0300
-categories: [blog, physics]
+categories: [physics]
 pdf: none
 
 ---
