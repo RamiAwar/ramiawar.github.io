@@ -1,7 +1,10 @@
 
 _site/
 .sass-cache/
-.jekyll-metadata
+.jekyll-metadata/
+.jekyll-cache/
 Gemfile.lock
 *.gem
 vendor/
+.forestry/
+
