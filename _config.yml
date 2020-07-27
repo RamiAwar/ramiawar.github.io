@@ -20,7 +20,6 @@ tiles-count: 100
 collections:
   posts:
     output: true
-    permalink: "/blog/:title/"
   projects:
     output: true
     permalink: "/projects/:path/"
@@ -31,6 +30,7 @@ plugins:
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-category-pages
 
 
 include: ['_pages']

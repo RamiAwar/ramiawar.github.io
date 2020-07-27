@@ -1,31 +1,53 @@
 <!DOCTYPE html>
-<!--
-    Forty by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-  -->
 <html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+    {% seo title=true %}
+    {% include meta.html %}
 
-  {% include head.html %}
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
+
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon-32x32.png">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158049270-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-158049270-1');
+  </script>
+
+
+  </head>
 
   <body>
+    <div id="bar"></div>
+    <div class="wrapper-container">
+      <div class="wrapper-masthead">
+        <div class="container">
+          <header class="masthead clearfix">
+            <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.baseurl }}{{ site.avatar }}" alt="{{ site.title }}" /></a>
 
-    {% include header.html %} 
-    
-    
-    <!-- Main -->
-    <div id="main" class="alt">
+            <div class="site-info">
+              <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+              <p class="site-description">{{ site.description }}</p> 
+            </div>
 
-      <!-- One -->
-      <section id="one">
-        
-      	<div class="inner">
-
-          <header class="major">
-            <h1> Blog </h1>
+            <nav>
+              <a href="{{ site.baseurl }}/">Home</a>
+              <a href="{{ 'blog.html' | absolute_url }}/">Blog</a>
+              <a href="{{ 'contact.html' | absolute_url }}">Contact</a>
+            </nav>
           </header>
+        </div>
+      </div>
 
-
+      <div class="wrapper-main">
+        <div id="main" role="main" class="container">
           {% for post in site.posts %}
             
             {% if post.title != 404 %}
@@ -41,13 +63,17 @@
 
 
           {% endfor %}
-      	</div>
-      </section>
+        </div>
+      </div>
 
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+            {% include svg-icons.html %}
+          </footer>
+        </div>
+      </div>
     </div>
 
-    {% include footer.html %}
-
   </body>
-
 </html>
