@@ -9,7 +9,7 @@ categories:
 - C#
 - 3d modelling
 - game development
-image: "/assets/images/zoya_and_ekon/zoya_and_ekon_1.jpg"
+image: "/assets/images/zoya_and_ekon/zoya_and_ekon_1.wdp"
 pdf: 'none'
 videos: []
 
@@ -34,4 +34,4 @@ That is in addition to modelling the characters, texturing and animating them, m
 
 The game is free to play for the windows platform on [my itch.io page](https://ramiawar.itch.io), where there are some other games available as well.
 
-![](/assets/images/zoya_and_ekon/zoya_and_ekon_2.jpg)![](/assets/images/zoya_and_ekon/zoya_and_ekon_1.jpg)![](/assets/images/zoya_and_ekon/zoya_and_ekon_3.jpg)
+![](/assets/images/zoya_and_ekon/zoya_and_ekon_2.wdp)![](/assets/images/zoya_and_ekon/zoya_and_ekon_1.wdp)![](/assets/images/zoya_and_ekon/zoya_and_ekon_3.wdp)
