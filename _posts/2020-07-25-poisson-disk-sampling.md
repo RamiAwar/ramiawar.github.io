@@ -46,18 +46,23 @@ It is obvious that the distribution of points is not isotropic (identical in any
 ## On Blue Noise
 The term blue noise refers to an even, isotropic, yet unstructured (non-uniform) distribution of points. This means that in any direction considered, the distribution of points is identical, although it has no structure. The abscence of structure prevents aliasing, and that is intuitively understandable by looking at [Moiré patterns](http://clearlyexplained.com/moire-patterns/index.html). In the example below, two structured patterns interfere to form visible artifacts. 
 
-{% include image.html file="poisson_disk_sampling/moire_patterns.png" description="Moiré Patterns - clearlyexplained.com/moire-patterns/" %}
+{% include image.html file="poisson_disk_sampling/moire_patterns.wdp" description="Moiré Patterns - clearlyexplained.com/moire-patterns/" %}
 
 As a matter of fact, the human eye contains an array of non-uniformly distributed photoreceptors, and that is the only reason that the eye does not produce its own aliasing effects. Photoreceptor cells in the fovea are tightly packed and the lens acts as an antialiasing filter. The region outside the fovea shows a much lower density of cells which are also non-uniformly distributed (The fovea is a tiny pit in the retina that provides the clearest vision of all). The image below shows the distribution of cones in the retina (photoreceptors responsible for seeing color in well-lit environments):
 
-{% include image.html file="poisson_disk_sampling/cone_distribution.jpg" description="Cone Distribution in the Retina - askabiologist.asu.edu/rods-and-cones" %}
+{% include image.html file="poisson_disk_sampling/cone_distribution.wdp" description="Cone Distribution in the Retina - askabiologist.asu.edu/rods-and-cones" %}
 
 More information on how our visual perception works can be [found here](https://askabiologist.asu.edu/rods-and-cones). 
 
 As you can see, the distribution of cones seems like a poisson disk distribution. Taking an even closer look makes it seem like rods and cones are distributed similar to a forest of mysterious plants!
 
-{% include image.html file="poisson_disk_sampling/microscopic_retina.jpg" description="Rods and Cones in the Retina - fineartamerica.com/featured/7-rods-and-cones-in-retina-omikron.html" %}
+{% include image.html file="poisson_disk_sampling/microscopic_retina.wdp" description="Rods and Cones in the Retina - fineartamerica.com/featured/7-rods-and-cones-in-retina-omikron.html" %}
 
 They are tightly packed but with a minimum distance between each so as to take up space and not affect the performance of surrounding rods and cones, just as trees need a minimum distance between each other so as to have access to sunlight and not block each other (Plants in nature help each other out by communicating via myccorhizal networks!).
 
+<script src="/assets/js/fourier.js" type="text/javascript"></script>
+<script type="text/javascript">
+out = []
+
+</script>
 
