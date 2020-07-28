@@ -10,7 +10,7 @@ categories:
 - arduino
 - robotics
 - project
-image: "/assets/images/autonomous_car/fig5.wdp"
+image: "/assets/images/autonomous_car/fig5.jpg"
 pdf: "/assets/pdfs/auto_car_report.pdf"
 videos:
 - 5YBKvhzpwfI

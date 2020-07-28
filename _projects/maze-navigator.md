@@ -4,7 +4,7 @@ title: Maze Navigating Robot
 date: 2016-1-1
 description: Autonomous mobile robot with simple SLAM
 categories: project, finance
-image: /assets/images/maze-navigator.wdp
+image: /assets/images/maze-navigator.jpg
 videos: [f5982fyIUCE]
 pdf: "none"
 ---

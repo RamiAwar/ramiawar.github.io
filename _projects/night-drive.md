@@ -9,7 +9,7 @@ categories:
 - web
 - javascript
 - game development
-image: "/assets/images/nightdrive/nightdrive.wdp"
+image: "/assets/images/nightdrive/nightdrive.jpg"
 pdf: 'none'
 videos: []
 
@@ -37,6 +37,6 @@ For more of my games, check out my itch.io page: [RamiAwar.itch.io](https://rami
 * Adding touch and keyboard controls
 * Experimenting with sphere instead of cylinder for a ground, allowing for more freedom in movement and a super-mario galaxy planet movement mechanic.
 
-![](/assets/images/nightdrive/nightdrive_3.wdp)
+![](/assets/images/nightdrive/nightdrive_3.jpg)
 
-![](/assets/images/nightdrive/nightdrive_1.wdp)![](/assets/images/nightdrive/nightdrive_2.wdp)
+![](/assets/images/nightdrive/nightdrive_1.jpg)![](/assets/images/nightdrive/nightdrive_2.jpg)

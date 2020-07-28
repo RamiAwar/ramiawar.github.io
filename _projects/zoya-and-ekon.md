@@ -3,13 +3,8 @@ layout: blog_post
 title: Zoya and Ekon
 date: 2017-08-11T22:00:00.000+00:00
 description: Unity3D Local Gamejam Submission
-categories:
-- illustration
-- animation
-- C#
-- 3d modelling
-- game development
-image: "/assets/images/zoya_and_ekon/zoya_and_ekon_1.wdp"
+categories: [3d modelling, game dev, illustration, animation, unity]
+image: "/assets/images/zoya_and_ekon/zoya_and_ekon_1.jpg"
 pdf: 'none'
 videos: []
 
@@ -34,4 +29,4 @@ That is in addition to modelling the characters, texturing and animating them, m
 
 The game is free to play for the windows platform on [my itch.io page](https://ramiawar.itch.io), where there are some other games available as well.
 
-![](/assets/images/zoya_and_ekon/zoya_and_ekon_2.wdp)![](/assets/images/zoya_and_ekon/zoya_and_ekon_1.wdp)![](/assets/images/zoya_and_ekon/zoya_and_ekon_3.wdp)
+![](/assets/images/zoya_and_ekon/zoya_and_ekon_2.jpg)![](/assets/images/zoya_and_ekon/zoya_and_ekon_1.jpg)![](/assets/images/zoya_and_ekon/zoya_and_ekon_3.jpg)

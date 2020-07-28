@@ -15,6 +15,8 @@ videos: []
 ---
 ### Description
 
+[GAME LINK](https://ramiawar.itch.io/packtothefuture)
+
 A hoarding grandma wants to get past hordes of infected people to get to the grocery store, while also avoiding her lover The Professor, who seems to get in her way every time she's out of the house!
 
 Rain havoc on the world with your slippers! Slap those sick people away from you and maintain social distancing!

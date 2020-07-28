@@ -66,7 +66,7 @@ $$
 
 Visualizing the impact parameter, we see that all particles with impact parameters less than $$b_{max}$$ will collide with the star, hence all particles in a cylinder of surface area $$\pi b_{max}^2$$ and height $$vdt$$ will collide with the star in a time differential $$dt$$. Multiplying this volume with the density $$\rho$$ we get the mass that will be added to the star in a time differential $$dt$$. 
 
-{% include image.html file="impact_parameter.wdp" description="Impact parameter visualized - Wikipedia" %}
+{% include image.html file="impact_parameter.jpg" description="Impact parameter visualized - Wikipedia" %}
 
 Combining this yields the required equation:
 
