@@ -28,7 +28,7 @@ Refer to the github repository for more details, source code, and issue and mile
 
 {% include image.html file="vidnote/vidnote1.jpg" description="Choose video" %}
 
-{% include image.html file="vidnote/vidnote2.jpg" description="Main screen" %}
+{% include image.html file="vidnote/vidnote2.wdp" description="Main screen" %}
 
 {% include image.html file="vidnote/vidnote3.jpg" description="Annotation creation" %}
 

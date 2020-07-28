@@ -8,7 +8,7 @@ categories:
 - robotics
 - control
 - project
-image: "/assets/images/quanser.jpg"
+image: "/assets/images/quanser.wdp"
 pdf: "/assets/pdfs/dc_motor_controller_report.pdf"
 videos:
 - Wqkptu63s0o
