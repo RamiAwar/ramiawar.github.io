@@ -18,11 +18,21 @@ tiles-source: projects # accepts "posts" or "pages"
 tiles-count: 100
 
 collections:
+  category:
+    output: true
   posts:
     output: true
   projects:
     output: true
     permalink: "/projects/:path/"
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
 
 # Use the following plug-ins
 plugins:
@@ -30,8 +40,6 @@ plugins:
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
   - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-category-pages
-
 
 include: ['_pages']
 

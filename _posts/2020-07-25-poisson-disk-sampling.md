@@ -4,7 +4,7 @@ title: "Poisson Disk Sampling"
 permalink: /blog/poisson-disk-sampling/
 description: An implementation based review of poisson disk sampling methods
 date:   2020-07-25 01:24:38 +0300
-categories: [mathematics, game-dev]
+categories: [Mathematics, Game Dev]
 pdf: none
 ---
 

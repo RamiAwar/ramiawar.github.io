@@ -2,7 +2,7 @@
 layout: blog_post
 title: 'OpenAI Gym: Cart-Pole - Part 1'
 date: 2018-09-04T22:24:38.000+00:00
-categories: [ai]
+categories: [Optimization]
 description: Simple solution to cart-pole problem of OpenAI gym using randomness
 image: assets/images/openai.png
 pdf: none
