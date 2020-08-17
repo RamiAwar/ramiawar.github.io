@@ -21,7 +21,7 @@ Some applications of poisson disk sampling that I know of include sampling for r
 In stochastic sampling, any point has a finite probability of being chosen. This is powerful as the visual system is much more sensitive to aliasing than noise, and this lack of structure due to randomness more robustly prevents aliasing. For more information on what our retina looks like and uniform vs non-uniform sampling effects, check the [last section on blue noise](#blue).
 
 ### Uniform Patterns
-The first thing anyone would think of would be uniform random sampling. If we have a grid of width w and length l, we could keep sampling points (u, v) where U and V are random variables with uniform distributions over [0, w] and [0, h]. The following is what we would get with such an approach:
+The first thing that comes to mind when you think 'random' would be uniform random sampling. If we have a continuous space of width w and length l, we could keep sampling points (u, v) where U and V are random variables with uniform distributions over [0, w] and [0, h]. The following is what we would get with such an approach:
 
 <p class="codepen" data-height="408" data-theme-id="light" data-default-tab="js,result" data-user="RamiAwar" data-slug-hash="LYGoVKL" style="height: 424px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Uniform Random Sampling">
   <span>See the Pen <a href="https://codepen.io/RamiAwar/pen/LYGoVKL">
@@ -30,9 +30,26 @@ The first thing anyone would think of would be uniform random sampling. If we ha
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-It is obvious that the distribution of points is not isotropic (identical in any direction), and does not look like a good way to sample an image for example. It also doesn't look like a distribution of trees in a forest, as the placement is too random with overlap. 
+It is obvious that the distribution of points is not isotropic (identical in any direction), and does not look like a good way to sample an image for example. It also doesn't look like a distribution of trees in a forest, as the placement is too random with overlap.
+
+This can also be thought of from a surveying perspective, the origin of statistics. If we were to survey a population, we would not randomly pick individuals from the population, as the sampled individuals would not be truly representative of the population given a realistic case study. Techniques such as stratified sampling were developed to solve this problem, thus choosing a more representative sample. 
 
 ### Non-Uniform Patterns
+
+The dual of stratified sampling exists in computer graphics, and is a non-uniform sampling pattern called Jittered Sampling. Poisson disk sampling may also be thought of as another way to achieve this representative population. The fact that nature and evolution have come to this same conclusion shows the power of such a distribution in sampling n-dimensional spaces (More on n-dimensional space sampling later, for now we'll just stick to 2 dimensions for simplicity).
+
+#### Jittered Sampling
+
+This sampling technique is a direct derivative of uniform sampling. Split the space you are sampling into a grid of small cells, and then sample from a uniform random distribution inside each cell. This simple technique is very simple to implement and parallelize, which has made it a popular sampling method in computer graphics and other fields. Jittering approximates poisson disk distributions but with a very small disk radius (i.e. elements may be much closer to each other). This is expected as 2 elements may turn out to be nearly overlapping when random uniform samples are selected from adjacent cells. Below is an example implementation:
+
+
+<p class="codepen" data-height="444" data-theme-id="light" data-default-tab="js,result" data-user="RamiAwar" data-slug-hash="XWXLaVZ" style="height: 444px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="XWXLaVZ">
+  <span>See the Pen <a href="https://codepen.io/RamiAwar/pen/XWXLaVZ">
+  XWXLaVZ</a> by Rami Awar (<a href="https://codepen.io/RamiAwar">@RamiAwar</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+
+Note that the disks surrounding the points are simply there to show that they're much smaller than poisson disk sampling which is shown later. In reality, the disk sizes are not configurable and stochastic, and might be very close to zero, resulting in points nearly overlapping.
 
 <p class="codepen" data-height="402" data-theme-id="light" data-default-tab="js,result" data-user="RamiAwar" data-slug-hash="vYLMQab" style="height: 402px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Poisson Disk Sampling - Mitchell's Best Candidate">
   <span>See the Pen <a href="https://codepen.io/RamiAwar/pen/vYLMQab">
