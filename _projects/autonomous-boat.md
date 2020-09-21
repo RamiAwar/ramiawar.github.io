@@ -8,7 +8,7 @@ categories:
 - robotics
 - arduino
 image: "/assets/images/boat.jpg"
-pdf: "/assets/pdfs/pumpkinbox_report.pdf"
+pdf: "none"
 videos:
 - yp6Cl37HlTg
 - 3oYw3vUgXtw
