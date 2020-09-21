@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title: DC Motor Speed and Position Control
 date: 2017-07-11 22:00:00 +0000
 description: '12 Motor Controller Designs '

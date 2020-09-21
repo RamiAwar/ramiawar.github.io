@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title: PumpkinBox Engine
 date: 2020-05-25 23:00:00 +0000
 description: Personal project

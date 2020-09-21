@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title: Night Drive
 date: 2019-01-11 23:00:00 +0000
 description: Personal project

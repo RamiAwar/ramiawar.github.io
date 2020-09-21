@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title: Pack To The Future
 date: 2020-03-30 23:00:00 +0000
 description: Godot Game Jam Entry

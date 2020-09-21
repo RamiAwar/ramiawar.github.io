@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 title: QuantInvest
 date: 2019-03-19 23:00:00 +0000
 description: Quantitative Investment Management Platform

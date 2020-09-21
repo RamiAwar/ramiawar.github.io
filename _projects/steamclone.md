@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog_post
 date: 2017-05-09 08:33:00 +0000
 title: Steam Clone
 description: Computer Networks Course Project
