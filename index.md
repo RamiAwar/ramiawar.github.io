@@ -7,4 +7,5 @@ image:
 author: Rami Awar
 show_tile: false
 ---
-Junior software engineer with a specialization in machine learning. Feel free to contact me.
+
+Senior backend engineer at [Proton](https://proton.ai) and author of [Softgrade](https://softgrade.org). Open for any consulting opportunities.
