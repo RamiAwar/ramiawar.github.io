@@ -8,3 +8,5 @@ Gemfile.lock
 vendor/
 .forestry/
 
+.history/
+.DS_Store
