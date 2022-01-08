@@ -9,7 +9,7 @@ categories:
 - backend
 - websocket
 - project
-image: "/assets/images/ephm/ephm.jpg"
+image: "/assets/images/ephm/ephm.png"
 pdf: 'none'
 
 
